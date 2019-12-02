@@ -31,7 +31,7 @@ m:{max[x]-x}get count each y             / padding count to match max width (typ
 g:z,/:mnist[`n][y],'m#\:z:1 28 28#0h     / blank leading column, blanks to pad to same width
 g:g,'mnist[`n][0N 1#key y],'x,'m#\:z     / join labels w'image list padded with blank images
 g:makegrid(raze g; 2*count y; 1+max count'[y]; 2; 255)  / re-arrange into single grid of images
-png tensor g /png(`miss.png;g)
+png(`miss.png;g)
 
 -2 "\nmismatches:"; show y
 -2 "\ngrid of mismatches: miss.png";
