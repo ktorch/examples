@@ -1,7 +1,7 @@
 .. ktorch documentation master file, created by
    sphinx-quickstart on Wed Jul  8 11:59:45 2020.
 
-k api to pytorch
+k api to pytorch - examples
 ==================================
 
 .. toctree::
