@@ -1,15 +1,17 @@
-system"l ",1_string` sv(first` vs hsym .z.f),`mnist.q  /load data w'mnist.q (assume same dir)
-{key[x]set'get x}(`ktorch 2:`fns,1)[];                 /define ktorch api fns
+p:first` vs hsym .z.f                      /path of this script
+system"l ",1_string` sv p,`mnist.q         /load data w'mnist.q (assume same dir)
+{key[x]set'get x}(`ktorch 2:`fns,1)[];     /define ktorch api fns
 
 / make labels longs, scale pixels from 0-255 to -1 to 1
 mnist:@[;`y`Y;"j"$]@[mnist;`x`X;{resize("e"$-1+x%127.5;-1 1 28 28)}]
 
-if[in[c:device[];cudadevices()]; setting`benchmark,1b]
+if[in[c:device[];cudadevices()]; setting`benchmark,1b] /set benchmark mode if CUDA
 
-/ define sequential network layers, move to CUDA device if avail, add loss & optimizer
-q:seq((`conv2d; 1;20;5);`relu;`drop;(`maxpool2d;2);
-      (`conv2d;20;50;5);`relu;`drop;(`maxpool2d;2);`flatten;
-      (`linear;800;500);`relu;`drop;(`linear;500;10))
+/ define sequential layers, move to CUDA device if available, add loss & optimizer
+q:module`sequential,
+   enlist'[((`conv2d; 1;20;5);`relu;`drop;(`maxpool2d;2);
+            (`conv2d;20;50;5);`relu;`drop;(`maxpool2d;2);`flatten;
+            (`linear;800;500);`relu;`drop;(`linear;500;10))]
 to(q; c)
 m:model(q; loss`ce; opt(`sgd;q))
 
@@ -27,10 +29,10 @@ r:asc{([]y:x;yhat:y;ind:til count x)where not x=y}[mnist`Y]evaluate(m;V;1000;`ma
 y:exec yhat by y from r                  / mismatches by digit
 x:exec ind by y from r                   / indices in test data
 x:"h"$127.5*1+first''[mnist[`X]get x]    / get images, scale back to pixels from 0-255
-p:{max[x]-x}get count each y             / padding count to match max width (typically for '9')
-g:z,/:mnist[`n][y],'p#\:z:1 28 28#0h     / blank leading column, blanks to pad to same width
-g:g,'mnist[`n][0N 1#key y],'x,'p#\:z     / join labels w'image list padded with blank images
+n:{max[x]-x}get count each y             / padding count to match max width (typically for '9')
+g:z,/:mnist[`n][y],'n#\:z:1 28 28#0h     / blank leading column, blanks to pad to same width
+g:g,'mnist[`n][0N 1#key y],'x,'n#\:z     / join labels w'image list padded with blank images
 g:makegrid(raze g; 2*count y; 1+max count'[y]; 2; 255)  / re-arrange into single grid of images
 
 -2 "\nmismatches:"; show y
--2 "\ngrid of mismatches: ",1_string png(`:out/conv.png;g);
+-2 "\ngrid of mismatches: ",1_string png(` sv p,`out`conv.png;g);
