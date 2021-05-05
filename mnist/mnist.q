@@ -1,6 +1,7 @@
-/ given path w'MNIST files, create dictionary of train/test images & labels
+/ assume data/ dir w'MNIST files at same level as this script,
+/ create dictionary of train/test images & labels
 / download from http://yann.lecun.com/exdb/mnist/
-mnist:hsym`$getenv[`HOME],"/data/mnist"
+mnist:` sv @[` vs hsym .z.f;1;:;`data]
 mnist:mnist{` sv x,`$"-"sv string y}'cross/[(`train`t10k;`images`labels,'`idx3`idx1;`ubyte)]
 mnist:`x`y`X`Y!{$[x like"*images*";16_;8_]"h"$read1 x}'[mnist]
 
