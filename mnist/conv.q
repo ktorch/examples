@@ -13,16 +13,16 @@ q:module`sequential,
             (`conv2d;20;50;5);`relu;`drop;(`maxpool2d;2);`flatten;
             (`linear;800;500);`relu;`drop;(`linear;500;10))]
 to(q; c)
-m:model(q; loss`ce; opt(`sgd;q;`momentum,.1))
-
+m:model(q; loss`ce; opt(`sgd;q;`momentum`decay!.1 .0001))
 to(v:vector mnist`x`y; c)  / vector of training tensors, moved to gpu if available
 to(V:vector mnist`X`Y; c)  / testing tensors used to evaluate model
 
-/ set a learning rate schedule based on number of passes through the data
-r:`s#0 6 11 16 18 20!.1 .05 .02 .01 .005 .002
-msg:{-1 raze[("";"  lr:";"  loss:";"  test:";"  match:"),'.Q.fmt'[4 6 9 7 6;0 3 6 4 2;x]],"%";}
+/ set learning rate schedule based on number of passes through the data
+r:{(k+1)!.5*x*1+cos acos[-1]*(k:til y)%y}[.1]30
+fmt:.Q.fmt'[4 7 9 7 6;0 4 6 4 2]
+msg:{-1 raze[("";"  lr:";"  loss:";"  test:";"  match:"),'fmt x],"%";}
 fit:{[m;v;V;w;r;i] lr(m;r@:i); a:avg train(m;v;w); msg i,r,a,evaluate(m;V;1000;`loss`accuracy); i+1}
-20 fit[m;v;V;30;r]/1;  /20 passes, 30 images per batch
+\ts count[r] fit[m;v;V;30;r]/1;  /30 passes, 30 images per batch
 
 /build table of mismatches in test dataset, convert to .png with labels
 t:asc{([]y:x;yhat:y;ind:til count x)where not x=y}[mnist`Y]evaluate(m;V;1000;`max)
@@ -36,10 +36,3 @@ g:makegrid(raze g; 2*count y; 1+max count'[y]; 2; 255)  / re-arrange into single
 
 -2 "\nmismatches:"; show y
 -2 "\ngrid of mismatches: ",1_string png(` sv p,`out`conv.png;g);
-
-\
-n     | 300       
-low   | 99.4      
-high  | 99.64     
-median| 99.53     
-stddev| 0.039
