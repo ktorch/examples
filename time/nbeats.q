@@ -1,8 +1,7 @@
 {key[x]set'x;}(`ktorch 2:`fns,1)[];                     /define pytorch interface
-if[in[c:device[];cudadevices()]; setting`benchmark,1b]  /set benchmark mode if CUDA
-
+d:first` vs hsym .z.f                                   /dir of this script
 b:3*f:5                                                 /backcast 15,forecast 5
-x:last flip("MJ";1#",")0:`:data/milk.csv                /read from csv
+x:last flip("MJ";1#",")0:` sv d,`data`milk.csv          /assume data/ with .csv in same dir as script
 x:(0,floor .8*count x)_x@:til[b+f]+/:til 1+count[x]-b+f /create train & test data (80/20% split)
 x%:a:max raze first x                                   /divide by max of train set
 x:flip''[(0,b)_/:flip'["e"$x]]                          /backcast & forecast for train & test sets
@@ -16,7 +15,8 @@ generic:{[u;b;f;t] /u:hidden units, b:backcasts, f:forecasts,t:thetas
  a:`relu; m:`linear,'((`theta;u;t;0b); (`backcast;t;b); (`forecast;t;f));
  enlist(`fork;seq(`sequential`bc;m 0;a;m 1);seq(`sequential`fc;m 0;a;m 2))}
 
-m:module`nbeats,raze block[256;4;b;f]''[3#'4 8]  /2 stacks of 3 blocks each, 4 layers per block
+if[in[c:device[];cudadevices()]; setting`benchmark,1b]  /set benchmark mode if CUDA available
+m:module`nbeats,raze block[256;4;b;f]''[3#'4 8]         /2 stacks of 3 blocks each, 4 layers per block
 to(m;c)
 m:model(m;loss`mse;opt(`adamw;m;`decay,.1))
 
