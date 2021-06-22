@@ -4,7 +4,7 @@
 Start
 =====
 
-A quick example, `spirals.q<https://github.com/ktorch/examples/blob/master/start/spirals.q>`_, demonstrates the main parts of a neural network and how the k api to Pytorch puts the pieces together.
+A quick example, `spirals.q <https://github.com/ktorch/examples/blob/master/start/spirals.q>`_, demonstrates the main parts of a neural network and how the k api to Pytorch puts the pieces together.
 
 The script generates some spirals with random noise for 3 sets of data:
 
@@ -67,7 +67,7 @@ Define a function to generate spirals and add noise:
 
 Tensor ``x`` and ``y`` are the inputs and targets.
 
-A `sequential model<https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html>`_ is defined with two `linear<https://pytorch.org/docs/stable/generated/torch.nn.Linear.html>`_ modules and a `relu<https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html>`_ activation function in between.
+A `sequential model <https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html>`_ is defined with two `linear <https://pytorch.org/docs/stable/generated/torch.nn.Linear.html>`_ modules and a `relu <https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html>`_ activation function in between.
 Passing inputs to this model will return a tensor with one row per observation and columns of raw, unnormalized scores for each class.
 
 ::
@@ -94,7 +94,7 @@ Passing inputs to this model will return a tensor with one row per observation a
    -0.02235188 0.03726457 -0.07054836
    ..
 
-These scores are given to the `cross entropy loss function<https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html>`_ along with the actual classification, 0, 1 or 2.
+These scores are given to the `cross entropy loss function <https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html>`_ along with the actual classification, 0, 1 or 2.
 
 ::
 
