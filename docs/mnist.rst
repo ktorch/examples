@@ -55,8 +55,8 @@ The `mnist.q <https://github.com/ktorch/examples/blob/master/mnist/mnist.q>`_ sc
    Y| 10000
    n| 10
 
-Dictionary keys ```x``,```y`` contain the 60,000 training images and labels (60,000 x 28 x 28 = 47,040,000),
-keys ```X``,```Y`` contain the 10,000 images and labels for testing the fitted model.
+Dictionary keys ```x``, ```y`` contain the 60,000 training images and labels (60,000 x 28 x 28 = 47,040,000),
+keys ```X``, ```Y`` contain the 10,000 images and labels for testing the fitted model.
 The ```n`` entry contains digits 0-9 used to label output:
 
 ::
@@ -92,6 +92,29 @@ The `conv.q <https://github.com/ktorch/examples/blob/master/mnist/conv.q>`_ scri
                (`linear;800;500);`relu;`drop;(`linear;500;10))]
 
 
+PyTorch's representation of the model looks like:
+
+::
+
+   q)-2 str q;
+   torch::nn::Sequential(
+     (0): torch::nn::Conv2d(1, 20, kernel_size=[5, 5], stride=[1, 1])
+     (1): torch::nn::ReLU()
+     (2): torch::nn::Dropout(p=0.5, inplace=false)
+     (3): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1], ceil_mode=false)
+     (4): torch::nn::Conv2d(20, 50, kernel_size=[5, 5], stride=[1, 1])
+     (5): torch::nn::ReLU()
+     (6): torch::nn::Dropout(p=0.5, inplace=false)
+     (7): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1], ceil_mode=false)
+     (8): torch::nn::Flatten(start_dim=1, end_dim=-1)
+     (9): torch::nn::Linear(in_features=800, out_features=500, bias=true)
+     (10): torch::nn::ReLU()
+     (11): torch::nn::Dropout(p=0.5, inplace=false)
+     (12): torch::nn::Linear(in_features=500, out_features=10, bias=true)
+   )
+
+Running the model over 30 epochs takes around 3 minutes on a single GTX 1080 gpu with accuracy of around 99.6%
+
 ::
 
    > q examples/mnist/conv.q
@@ -102,28 +125,7 @@ The `conv.q <https://github.com/ktorch/examples/blob/master/mnist/conv.q>`_ scri
      2.  lr: 0.0997  loss: 0.080588  test: 0.0644  match: 98.88%
      3.  lr: 0.0989  loss: 0.064251  test: 0.0465  match: 99.01%
      4.  lr: 0.0976  loss: 0.059539  test: 0.0600  match: 99.14%
-     5.  lr: 0.0957  loss: 0.050821  test: 0.0712  match: 98.99%
-     6.  lr: 0.0933  loss: 0.048098  test: 0.0564  match: 99.18%
-     7.  lr: 0.0905  loss: 0.042013  test: 0.0400  match: 99.19%
-     8.  lr: 0.0872  loss: 0.038386  test: 0.0504  match: 99.07%
-     9.  lr: 0.0835  loss: 0.037618  test: 0.0376  match: 99.47%
-    10.  lr: 0.0794  loss: 0.034723  test: 0.0369  match: 99.45%
-    11.  lr: 0.0750  loss: 0.029137  test: 0.0275  match: 99.47%
-    12.  lr: 0.0703  loss: 0.029289  test: 0.0336  match: 99.44%
-    13.  lr: 0.0655  loss: 0.024887  test: 0.0322  match: 99.43%
-    14.  lr: 0.0604  loss: 0.023539  test: 0.0297  match: 99.44%
-    15.  lr: 0.0552  loss: 0.022607  test: 0.0293  match: 99.56%
-    16.  lr: 0.0500  loss: 0.018692  test: 0.0236  match: 99.55%
-    17.  lr: 0.0448  loss: 0.018075  test: 0.0313  match: 99.56%
-    18.  lr: 0.0396  loss: 0.018935  test: 0.0283  match: 99.56%
-    19.  lr: 0.0345  loss: 0.015582  test: 0.0236  match: 99.53%
-    20.  lr: 0.0297  loss: 0.014649  test: 0.0231  match: 99.58%
-    21.  lr: 0.0250  loss: 0.013421  test: 0.0231  match: 99.55%
-    22.  lr: 0.0206  loss: 0.013126  test: 0.0232  match: 99.59%
-    23.  lr: 0.0165  loss: 0.011891  test: 0.0212  match: 99.56%
-    24.  lr: 0.0128  loss: 0.010456  test: 0.0233  match: 99.56%
-    25.  lr: 0.0095  loss: 0.011038  test: 0.0209  match: 99.61%
-    26.  lr: 0.0067  loss: 0.011231  test: 0.0208  match: 99.59%
+    ..
     27.  lr: 0.0043  loss: 0.010265  test: 0.0205  match: 99.56%
     28.  lr: 0.0024  loss: 0.010330  test: 0.0204  match: 99.58%
     29.  lr: 0.0011  loss: 0.010452  test: 0.0204  match: 99.59%
@@ -147,4 +149,7 @@ A dictionary of mismatches with keys for the digit and the mismatched digit indi
 The `grid of mismatches `examples/mnist/out/conv.png <https://github.com/ktorch/examples/blob/master/mnist/out/conv.png>` is written to a .png file.
 
 
+.. figure:: ../mnist/out/conv.png
+   :scale: 40 %
+   :alt: MNIST mismatches
 
