@@ -26,7 +26,7 @@ Define a function to generate spirals and add noise:
    q)grid:{g:10 10; ./[(1+g+g)#0N;g{"j"$x+x*y}/:x;:;y]}   / display 21 x 21 grid
 
    q)x:raze spiral[n]'[til k;.2*tensor z]  /generate spirals w'noise
-   q)y:til[k]where k#n                     /classes 1-3
+   q)y:til[k]where k#n                     /classes 0,1,2
 
    q)10?([]x;y)
    x                     y
@@ -68,8 +68,8 @@ Define a function to generate spirals and add noise:
 
 Tensor ``x`` and ``y`` are the inputs and targets.
 
-A simple model is defined with two linear modules and a relu activation function in between.
-Passing inputs to this model will return a tensor with a row of raw, unnormalized scores for each class.
+A `sequential model<https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html>`_ is defined with two `linear<https://pytorch.org/docs/stable/generated/torch.nn.Linear.html>`_ modules and a `relu<https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html>`_ activation function in between.
+Passing inputs to this model will return a tensor with one row per observation and columns of raw, unnormalized scores for each class.
 
 ::
 
@@ -95,7 +95,7 @@ Passing inputs to this model will return a tensor with a row of raw, unnormalize
    -0.02235188 0.03726457 -0.07054836
    ..
 
-These scores are given to the cross entropy loss function along with the actual classification, 1, 2 or 3.
+These scores are given to the `cross entropy loss function<https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html>`_ along with the actual classification, 0, 1 or 2.
 
 ::
 
@@ -103,10 +103,77 @@ These scores are given to the cross entropy loss function along with the actual 
    q)a:loss(l;r;y)     / calculate loss on forward calculation
    q)tensor a          / loss is a scalar
    1.119298e
+   q)backward a        / calculate the chain of gradients back through the network
 
-The gradients are calculated and the linear weights are updated by an optimizer, in this case 
+The gradients are calculated and the linear weights are updated by an optimizer, in this case `simple gradient descent with momentum <https://pytorch.org/docs/stable/generated/torch.optim.SGD>`_.
 
 ::
 
   q)o:opt(`sgd; q; .2; .99) /gradient descent: learning rate .2, momentum .99
+
+The main steps can be grouped in a function: zero out any previous gradients, perform forward calculation, then loss with forward result and target, followed by a backward calculation of the gradients and an optimization step to improve the linear weights.
+
+::
+
   q)f:{[q;l;o;x;y]zerograd o; r:tensor y:loss(l;x:forward(q;x);y); backward y; free'[(x;y)]; step o; r}
+
+  q)f[q;l;o;x;y]
+  1.119298e
+
+  q)\ts:100 r:f[q;l;o;x;y]   /repeat training steps 100 times
+  140 1728
+  q)r                        /check for decreasing error
+  0.07197823e
+
+Create another function to evaluate the model, comparing the column with the maximum raw score to the actual class:
+
+::
+
+   q)g:{[q;x;y]p:100*avg tensor[y]={x?'max flip x}tensor x:forward(q;x); free x; p}
+
+   q)g[q;x;y]   / about 98% accuracy
+   97.73333
+
+   q)\ts:100 r:f[q;l;o;x;y]  / try another 100 training steps
+   153 1728
+   q)r
+   0.01378922e
+
+   q)g[q;x;y]
+   99.66667
+
+The full run of the script creates a new data set with different random variables to test the fitted model:
+
+::
+
+   > q examples/start/spirals.q
+   KDB+ 4.0 2020.05.04 Copyright (C) 1993-2020 Kx Systems
+   l64/ 12(16)core 64037MB
+
+                                        
+            0       2   2 2 2 2 2          
+          0 0       2 2 2 2 2 2 2 2        
+        0 0     2 2 2 2 2 2 2 2 2 2 2      
+      0 0 0   2 2 2 2             2 2 2    
+    0 0 0     2 2 2         1       2 2 2  
+    0 0 0   2 2 2 2     1 1 1         2 2  
+    0 0 0   2 2 2     1 1 1 1 1 1       2 2
+    0 0 0 2 2 2 2   1 1 1 1 1 1 1 1       2
+    0 0 0   2 2 2   1 1 1     1 1 1 1      
+    0 0 0     2 2 2 2 2 0 0     1 1 1      
+    0 0 0     2 2 2 2 2 0 0     1 1 1      
+      0 0 0 0   2 2 2 0 0 0 0   1 1 1      
+      0 0 0 0 0 0   0 0 0 0     1 1 1      
+        0 0 0 0 0 0 0 0 0       1 1 1      
+            0 0 0 0 0 0 0     1 1 1 1      
+                  0           1 1 1        
+                            1 1 1 1        
+                    1   1 1 1 1 1          
+            1 1 1 1 1 1 1 1 1 1            
+                  1 1 1 1 1                
+   1083 1360
+   Accuracy on test data: 99.93333%
+   Accuracy w'new sample: 99.9%
+
+Further examples will bring in larger datasets that are separated into batches and trained on smaller subsets of the data, but using the same basic set of steos for training and evaluating the models.
+
