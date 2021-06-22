@@ -4,8 +4,7 @@
 Start
 =====
 
-A quick example here demonstrates the main parts of a neural network and how the k api to Pytorch
-puts the pieces together.
+A quick example, `spirals.q<https://github.com/ktorch/examples/blob/master/start/spirals.q>`_, demonstrates the main parts of a neural network and how the k api to Pytorch puts the pieces together.
 
 The script generates some spirals with random noise for 3 sets of data:
 
@@ -176,4 +175,3 @@ The full run of the script creates a new data set with different random variable
    Accuracy w'new sample: 99.9%
 
 Further examples will bring in larger datasets that are separated into batches and trained on smaller subsets of the data, but using the same basic set of steos for training and evaluating the models.
-
