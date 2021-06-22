@@ -183,15 +183,55 @@ Wide ResNet model
 
 The `wide.q <https://github.com/ktorch/examples/blob/master/vision/wide.q>`_ script creates a newer form of the ResNet model,
 decreasing depth and increasing width.
-After training for ?? epochs, it achieves 96 - 97% accuracy in about xx hours.
 In addition to an improved model, the script augments the data by using random cropping in additional to random horizontal
 flips of the training images.  The loss model is smoothed cross entropy in an attempt to prevent the model from overfitting to the training data at the expense of generalizing the parameters for classifying out-of-sample images.
 
-Running the wide ResNet for 200 epochs on a single GPU takes about a minute per epoch, running for about 3.5 hours to train a model with about 97% accuracy.  Again the main source of confusion is cats and dogs:
+Running the wide ResNet for 200 epochs on a single GPU takes about a minute per epoch, running for about 3.5 hours to train a model with about 96% accuracy.  
+
+::
+
+   > q examples/vision/wide.q
+   KDB+ 4.0 2020.05.04 Copyright (C) 1993-2020 Kx Systems
+   l64/ 12(16)core 64037MB 
+
+     1.  lr: 0.080000  loss: 1.635264  test: 1.5421  accuracy: 53.36%   15:32:08
+     2.  lr: 0.079995  loss: 1.240133  test: 1.2023  accuracy: 69.17%   15:33:09
+     3.  lr: 0.079980  loss: 1.083723  test: 1.1974  accuracy: 70.48%   15:34:10
+     4.  lr: 0.079956  loss: 0.994642  test: 1.0060  accuracy: 78.84%   15:35:11
+     5.  lr: 0.079921  loss: 0.946601  test: 0.9948  accuracy: 78.95%   15:36:13
+     6.  lr: 0.079877  loss: 0.908107  test: 0.9804  accuracy: 79.39%   15:37:14
+     7.  lr: 0.079822  loss: 0.881616  test: 0.9139  accuracy: 83.34%   15:38:16
+   ..
+    98.  lr: 0.041884  loss: 0.631557  test: 0.7380  accuracy: 91.01%   17:12:12
+    99.  lr: 0.041256  loss: 0.630563  test: 0.7389  accuracy: 90.55%   17:13:14
+   100.  lr: 0.040628  loss: 0.627417  test: 0.7118  accuracy: 92.03%   17:14:15
+   101.  lr: 0.040000  loss: 0.629066  test: 0.7673  accuracy: 90.15%   17:15:16
+   ..
+   195.  lr: 0.000178  loss: 0.502801  test: 0.6094  accuracy: 96.13%   18:51:12
+   196.  lr: 0.000123  loss: 0.502723  test: 0.6111  accuracy: 96.17%   18:52:13
+   197.  lr: 0.000079  loss: 0.502722  test: 0.6108  accuracy: 96.10%   18:53:15
+   198.  lr: 0.000044  loss: 0.502749  test: 0.6112  accuracy: 96.15%   18:54:16
+   199.  lr: 0.000020  loss: 0.502889  test: 0.6126  accuracy: 96.21%   18:55:17
+   200.  lr: 0.000005  loss: 0.502738  test: 0.6099  accuracy: 96.17%   18:56:18
+
+
+Again the main source of confusion is cats and dogs:
 
 ::
 
    q)t:d[`s]@/:([]y:d`Y; yhat:evaluate(m;V;1000;`max))
 
    q)select[10;>n] n:count i by y,yhat from t where not y=yhat
+   y          yhat      | n 
+   ---------------------| --
+   cat        dog       | 50
+   dog        cat       | 36
+   automobile truck     | 19
+   airplane   ship      | 19
+   bird       frog      | 15
+   ship       airplane  | 14
+   bird       deer      | 12
+   truck      automobile| 11
+   cat        bird      | 11
+   dog        bird      | 11
 
