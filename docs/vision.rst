@@ -187,6 +187,11 @@ After training for ?? epochs, it achieves 96 - 97% accuracy in about xx hours.
 In addition to an improved model, the script augments the data by using random cropping in additional to random horizontal
 flips of the training images.  The loss model is smoothed cross entropy in an attempt to prevent the model from overfitting to the training data at the expense of generalizing the parameters for classifying out-of-sample images.
 
-Running the wide ResNet for 200 epochs on a single GPU takes about a minute per epoch, running for 3.xx hours trains a model with about 97% accuracy.  Again the main source of confusion is over cats and dogs:
+Running the wide ResNet for 200 epochs on a single GPU takes about a minute per epoch, running for about 3.5 hours to train a model with about 97% accuracy.  Again the main source of confusion is cats and dogs:
 
+::
+
+   q)t:d[`s]@/:([]y:d`Y; yhat:evaluate(m;V;1000;`max))
+
+   q)select[10;>n] n:count i by y,yhat from t where not y=yhat
 
