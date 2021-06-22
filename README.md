@@ -1,6 +1,6 @@
 # ktorch examples
 k api to pytorch 
-([notes](https://ktorch.readthedocs.io/en/latest/))
+([notes](https://ktorch-examples.readthedocs.io/en/latest/), [api documentation](https://ktorch.readthedocs.io/en/latest/))
 
 - [start](start/) Starting example using spirals for classification
 - [mnist](mnist/) Classifying handwritten numbers using different models
