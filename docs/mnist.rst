@@ -81,7 +81,7 @@ Convolutional model
 *******************
 
 The `conv.q <https://github.com/ktorch/examples/blob/master/mnist/conv.q>`_ script builds a
-`sequential <https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html>`_ model with two i
+`sequential <https://pytorch.org/docs/stable/generated/torch.nn.Sequential.html>`_ model with two
 `convolutional <https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html>`_ layers and a final set of two `linear <https://pytorch.org/docs/stable/generated/torch.nn.Linear.html>`_ modules and a `relu <https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html>`_ activation function in between.
 
 ::
@@ -101,11 +101,11 @@ PyTorch's representation of the model looks like:
      (0): torch::nn::Conv2d(1, 20, kernel_size=[5, 5], stride=[1, 1])
      (1): torch::nn::ReLU()
      (2): torch::nn::Dropout(p=0.5, inplace=false)
-     (3): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1], ceil_mode=false)
+     (3): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1])
      (4): torch::nn::Conv2d(20, 50, kernel_size=[5, 5], stride=[1, 1])
      (5): torch::nn::ReLU()
      (6): torch::nn::Dropout(p=0.5, inplace=false)
-     (7): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1], ceil_mode=false)
+     (7): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1])
      (8): torch::nn::Flatten(start_dim=1, end_dim=-1)
      (9): torch::nn::Linear(in_features=800, out_features=500, bias=true)
      (10): torch::nn::ReLU()
@@ -146,10 +146,17 @@ A dictionary of mismatches with keys for the digit and the mismatched digit indi
    8| ,9
    9| 3 4 4 4 5 5 7 7 7 8 8
 
-The `grid of mismatches `examples/mnist/out/conv.png <https://github.com/ktorch/examples/blob/master/mnist/out/conv.png>` is written to a .png file.
+The grid of mismatches, `examples/mnist/out/conv.png, <https://github.com/ktorch/examples/blob/master/mnist/out/conv.png>`_ is written to a .png file.
 
 
 .. figure:: ../mnist/out/conv.png
-   :scale: 40 %
+   :scale: 100 %
    :alt: MNIST mismatches
 
+
+Generative Adversarial Network
+******************************
+
+
+Recurrent Model
+***************
