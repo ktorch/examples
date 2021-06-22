@@ -22,3 +22,7 @@ fmt:.Q.fmt'[4 9 9 7 6;0 6 6 4 2] /format epoch, rate, loss, test loss & accuracy
 msg:{-1 raze[("";"  lr:";"  loss:";"  test:";"  accuracy:"),'fmt[x]],"%   ",string"v"$.z.T;}
 fit:{[m;v;V;w;r;i] lr(m;r@:i); a:avg train(m;v;w); msg i,r,a,evaluate(m;V;1000;`loss`accuracy); i+1}
 \ts count[r] fit[m;v;V;125;r]/1;  / test for no. of epochs in learning rate schedule, batch size 125
+
+/ build table of test results
+t:d[`s]@/:([]y:d`Y; yhat:evaluate(m;V;1000;`max))
+show select[10;>n] n:count i by y,yhat from t where not y=yhat

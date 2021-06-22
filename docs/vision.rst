@@ -47,7 +47,7 @@ with the following structure for the uncompressed files:
 Basic ResNet model
 ******************
 
-The `res.q <https://github.com/ktorch/examples/blob/master/vision/res.q>`_ loads
+The `res.q <https://github.com/ktorch/examples/blob/master/vision/res.q>`_ scripts loads
 `cifar.q <https://github.com/ktorch/examples/blob/master/vision/cifar.q>`_ to read in CIFAR10 data.
 
 ::
@@ -72,8 +72,8 @@ Upper case keys ```X`` & ```Y`` contain the test data, 10,000 images and classes
 
 The mean and standard deviation of the training data images,
 calculated for each red,green and blue channel,
-is used to standardize the data to approximately mean zero and standard deviation of one.
-The training data is flipped horizontally to make 100,000 images and classes:
+is used to standardize the data to mean zero and a standard deviation of one.
+The training data is flipped horizontally to make 100,000 training images and classes:
 
 ::
 
@@ -111,7 +111,7 @@ These blocks are grouped in 4 layers to create a ResNet module, e.g.
 
 ::
 
-   q)show q:resnet[`basic;  1b; 2 2 2 2; 10]
+   q)show q:resnet[`basic; 1b; 2 2 2 2; 10]  / basic blocks, true for alternate case, 4 layers, 2 deep, 10 classes
    `sequential`resnet
    ,(`conv2d;`conv1;3;64;3;1;1;(`bias;0b))
    ,(`batchnorm2d;`bn1;64)
@@ -126,6 +126,7 @@ These blocks are grouped in 4 layers to create a ResNet module, e.g.
 
    q)q:module q  /define and allocate a PyTorch module in c++ from k definitions
 
+Training the model for 60 epochs (approximately 43 seconds per epoch on a single GTX 1080 gpu) takes around 42 minutes and manages about 92% accuracy on the test images.
 
 ::
 
@@ -149,6 +150,43 @@ These blocks are grouped in 4 layers to create a ResNet module, e.g.
     60.  lr: 0.000055  loss: 0.001862  test: 0.2511  accuracy: 92.66%   11:48:17
    2541882 4195776
     
+Building a table of results, the main source of misclassification is the model mistaking cats for dogs and vice versa:
+
+::
+
+   q)show 5?t:d[`s]@/:([]y:d`Y; yhat:evaluate(m;V;1000;`max))
+   y          yhat      
+   ---------------------
+   automobile automobile
+   airplane   airplane  
+   horse      horse     
+   truck      automobile
+   ship       ship      
+
+   q)select[10;>n] n:count i by y,yhat from t where not y=yhat
+   y          yhat      | n 
+   ---------------------| --
+   cat        dog       | 86
+   dog        cat       | 68
+   cat        deer      | 31
+   truck      automobile| 30
+   horse      dog       | 28
+   cat        frog      | 28
+   cat        bird      | 27
+   automobile truck     | 26
+   bird       deer      | 25
+   bird       airplane  | 24
+
 
 Wide ResNet model
 *****************
+
+The `wide.q <https://github.com/ktorch/examples/blob/master/vision/wide.q>`_ script creates a newer form of the ResNet model,
+decreasing depth and increasing width.
+After training for ?? epochs, it achieves 96 - 97% accuracy in about xx hours.
+In addition to an improved model, the script augments the data by using random cropping in additional to random horizontal
+flips of the training images.  The loss model is smoothed cross entropy in an attempt to prevent the model from overfitting to the training data at the expense of generalizing the parameters for classifying out-of-sample images.
+
+Running the wide ResNet for 200 epochs on a single GPU takes about a minute per epoch, running for 3.xx hours trains a model with about 97% accuracy.  Again the main source of confusion is over cats and dogs:
+
+
