@@ -16,7 +16,7 @@ q:module seq(`sequential; (`linear; 2; 100); `relu; (`linear; 100; k))
 l:loss`ce               /cross-entropy loss
 o:opt(`sgd; q; .2; .99) /gradient descent: learning rate .2, momentum .99
 
-f:{[q;l;o;x;y]zerograd o; backward y:loss(l;x:forward(q;x);y); free'[(x;y)]; step o}
+f:{[q;l;o;x;y]zerograd o; r:tensor y:loss(l;x:forward(q;x);y); backward y; free'[(x;y)]; step o; r}
 g:{[q;x;y]p:100*avg tensor[y]={x?'max flip x}tensor x:forward(q;x); free x; p}
 
 \ts:1000 f[q;l;o;x;y]
