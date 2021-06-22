@@ -57,7 +57,7 @@ The `mnist.q <https://github.com/ktorch/examples/blob/master/mnist/mnist.q>`_ sc
 
 Dictionary keys ```x``, ```y`` contain the 60,000 training images and labels (60,000 x 28 x 28 = 47,040,000),
 keys ```X``, ```Y`` contain the 10,000 images and labels for testing the fitted model.
-The ```n`` entry contains digits 0-9 used to label output:
+The ```n`` entry contains a font of digits 0-9 used to label output:
 
 ::
 
@@ -101,11 +101,11 @@ PyTorch's representation of the model looks like:
      (0): torch::nn::Conv2d(1, 20, kernel_size=[5, 5], stride=[1, 1])
      (1): torch::nn::ReLU()
      (2): torch::nn::Dropout(p=0.5, inplace=false)
-     (3): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1])
+     (3): torch::nn::MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1)
      (4): torch::nn::Conv2d(20, 50, kernel_size=[5, 5], stride=[1, 1])
      (5): torch::nn::ReLU()
      (6): torch::nn::Dropout(p=0.5, inplace=false)
-     (7): torch::nn::MaxPool2d(kernel_size=[2, 2], stride=[2, 2], padding=[0, 0], dilation=[1, 1])
+     (7): torch::nn::MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1)
      (8): torch::nn::Flatten(start_dim=1, end_dim=-1)
      (9): torch::nn::Linear(in_features=800, out_features=500, bias=true)
      (10): torch::nn::ReLU()
@@ -157,6 +157,24 @@ The grid of mismatches, `examples/mnist/out/conv.png, <https://github.com/ktorch
 Generative Adversarial Network
 ******************************
 
+The `gan.q <https://github.com/ktorch/examples/blob/master/mnist/gan.q>`_ script builds a generator and discriminator model to create new MNIST digits using random inputs and a generator model trained to convince the discriminator model that the digits are handwritten.
+
+The script produces a grid of generated images after each epoch.
+
+After a single epoch:
+
+.. figure:: ../mnist/out/gan01.png
+   :scale: 100 %
+   :alt: Epoch 1: Generated MNIST digits
+
+
+After 20 epochs, the images generated look like:
+
+.. figure:: ../mnist/out/gan20.png
+   :scale: 100 %
+   :alt: Epoch 20: enerated MNIST digits
 
 Recurrent Model
 ***************
+
+The `lstm.q <https://github.com/ktorch/examples/blob/master/mnist/lstm.q>`_ script uses a recurrent neural network to classify the digits.
