@@ -22,16 +22,16 @@ to(r;c)
 m:model(r; loss`ce; opt(`adam; r))
 
 f:{[m;t;v;i;s;w]
- x:narrow(t;0;i;w); resize(x;-1,s);
- y:narrow(t;0;i+1;w);
- vector(v;0;x);
+ x:narrow(t;0;i;w); resize(x;-1,s);  /i'th batch, reshape to batches x sequence
+ y:narrow(t;0;i+1;w);                /target is i'th batch shifted by one
+ vector(v;0;x);                      /vector w'x & previous hidden state, if any
  zerograd m;
- use[v]forward(m;v;til tensorcount v);
- x:tensor(v;0);
- a:tensor z:loss(m;x;y);
+ use[v]forward(m;v;til tensorcount v); /save model output & hidden state
+ x:tensor(v;0);                        /model output
+ a:tensor z:loss(m;x;y);               /calculate loss vs actual char sequence
  backward z;
- clip(m;5);
- step m;
+ clip(m;5);                            /clip gradients
+ step m;                               /Adam optimizer step
  free'[(x;y;z)];
  a}
  

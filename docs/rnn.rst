@@ -4,8 +4,12 @@
 Recurrent neural networks
 =========================
 
-The `char.q <>`_ script implements a character-level recurrent neural network to model and predict text given a set of Shakespeare plays in
-`data/shakespeare.txt <>`_, somewhat similar to the model described `here <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>`_.
+The `char.q <https://github.com/ktorch/examples/blob/master/rnn/char.q>`_ script implements a character-level recurrent neural network to model and predict text given a set of Shakespeare plays in
+`data/shakespeare.txt <https://github.com/ktorch/examples/blob/master/rnn/data/shakespeare.txt>`_, somewhat similar to the model described `here <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>`_.
+
+Sequences of characters are used to train the network to predict the next sequence. 
+After going through the data sample for 20 epochs, the trained network is used to generate text,
+predicting the next character from the sequence that has come before.
 
 ::
 
