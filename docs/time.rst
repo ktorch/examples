@@ -4,7 +4,7 @@
 Time series models
 ==================
 
-The script `nbeats.q <>`_ is an implementation of the basic `N-BEATS algorithm <https://arxiv.org/abs/1905.10437>`_, a neural-network based model for univariate timeseries forecasting.
+The script `nbeats.q <https://github.com/ktorch/examples/blob/master/time/nbeats.q>`_ is an implementation of the basic `N-BEATS algorithm <https://arxiv.org/abs/1905.10437>`_, a neural-network based model for univariate timeseries forecasting.
 
 Sample data is a `small, monthly milk production dataset <https://github.com/plotly/datasets/blob/master/monthly-milk-production-pounds.csv>`_.
 
