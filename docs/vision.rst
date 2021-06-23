@@ -134,22 +134,19 @@ Training the model for 60 epochs (approximately 43 seconds per epoch on a single
    KDB+ 4.0 2020.05.04 Copyright (C) 1993-2020 Kx Systems
    l64/ 12(16)core 64037MB 
 
-     1.  lr: 0.080000  loss: 1.369706  test: 1.0592  accuracy: 63.09%   11:06:38
-     2.  lr: 0.079945  loss: 0.736021  test: 0.6761  accuracy: 76.53%   11:07:19
-     3.  lr: 0.079781  loss: 0.513555  test: 0.5478  accuracy: 81.17%   11:08:01
-     4.  lr: 0.079508  loss: 0.409195  test: 0.5639  accuracy: 81.15%   11:08:43
-     5.  lr: 0.079126  loss: 0.349066  test: 0.4890  accuracy: 83.34%   11:09:25
-     6.  lr: 0.078637  loss: 0.311041  test: 0.5199  accuracy: 82.74%   11:10:07
-     7.  lr: 0.078042  loss: 0.281705  test: 0.5238  accuracy: 83.01%   11:10:49
-     8.  lr: 0.077343  loss: 0.261755  test: 0.4784  accuracy: 83.97%   11:11:32
-     9.  lr: 0.076542  loss: 0.239726  test: 0.4871  accuracy: 83.98%   11:12:14
-    10.  lr: 0.075640  loss: 0.222705  test: 0.4388  accuracy: 85.21%   11:12:57
-    ..
-    58.  lr: 0.000492  loss: 0.001860  test: 0.2526  accuracy: 92.62%   11:46:53
-    59.  lr: 0.000219  loss: 0.001867  test: 0.2529  accuracy: 92.68%   11:47:35
-    60.  lr: 0.000055  loss: 0.001862  test: 0.2511  accuracy: 92.66%   11:48:17
-   2541882 4195776
-    
+     1.  lr: 0.080000  loss: 1.395746  test: 1.0029  accuracy: 64.97%   19:00:52
+     2.  lr: 0.079945  loss: 0.764869  test: 0.7085  accuracy: 74.70%   19:01:34
+     3.  lr: 0.079781  loss: 0.538976  test: 0.5815  accuracy: 79.82%   19:02:16
+     4.  lr: 0.079508  loss: 0.424581  test: 0.4919  accuracy: 83.47%   19:02:58
+     5.  lr: 0.079126  loss: 0.364722  test: 0.5597  accuracy: 81.40%   19:03:41
+     6.  lr: 0.078637  loss: 0.324985  test: 0.4836  accuracy: 83.63%   19:04:23
+     7.  lr: 0.078042  loss: 0.292052  test: 0.4947  accuracy: 83.65%   19:05:06
+   ..
+    58.  lr: 0.000492  loss: 0.001877  test: 0.2648  accuracy: 92.00%   19:41:14
+    59.  lr: 0.000219  loss: 0.001876  test: 0.2646  accuracy: 92.08%   19:41:56
+    60.  lr: 0.000055  loss: 0.001868  test: 0.2654  accuracy: 92.04%   19:42:39
+
+
 Building a table of results, the main source of misclassification is the model mistaking cats for dogs and vice versa:
 
 ::
@@ -166,16 +163,16 @@ Building a table of results, the main source of misclassification is the model m
    q)select[10;>n] n:count i by y,yhat from t where not y=yhat
    y          yhat      | n 
    ---------------------| --
-   cat        dog       | 86
-   dog        cat       | 68
-   cat        deer      | 31
-   truck      automobile| 30
-   horse      dog       | 28
-   cat        frog      | 28
-   cat        bird      | 27
-   automobile truck     | 26
+   dog        cat       | 82
+   cat        dog       | 65
+   cat        bird      | 30
+   bird       airplane  | 30
+   truck      automobile| 27
+   airplane   ship      | 26
    bird       deer      | 25
-   bird       airplane  | 24
+   frog       cat       | 24
+   automobile truck     | 22
+   cat        frog      | 22
 
 
 Wide ResNet model
