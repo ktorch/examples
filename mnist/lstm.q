@@ -11,7 +11,7 @@ if[in[c:device[];cudadevices()]; setting`benchmark,1b] /set benchmark mode if CU
 q:module`sequential
 module(q; 1; (`lstm;     `recur; 28; 128; 2; 1b; 1b))
 module(q; 1; (`lstmout;  `output))
-module(q; 1; (`index;    `last; 1; -1))
+module(q; 1; (`select;   `last; 1; -1))
 module(q; 1; (`linear;   `decode; 128; 10))
 to(q; c)
 m:model(q; loss`ce; opt(`adamw;q))
