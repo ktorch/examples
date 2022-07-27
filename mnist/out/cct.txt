@@ -1,0 +1,85 @@
+torch::nn::Sequential(
+  (input): knn::Transform((
+    (train): torch::nn::Sequential(
+      (crop): knn::RandomCrop(size=[28, 28], pad=[3, 3, 3, 3])
+      (zscore): knn::Zscore(mean=33.3184, stddev=78.5675, inplace=false)
+    )
+    (eval): torch::nn::Sequential(
+      (zscore): knn::Zscore(mean=33.3184, stddev=78.5675, inplace=false)
+    )
+  )
+  (token): knn::SeqNest(
+    (conv1): torch::nn::Conv2d(1, 64, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+    (maxpool1): torch::nn::ReLU()
+    (relu1): torch::nn::MaxPool2d(kernel_size=[3, 3], stride=[2, 2], padding=[1, 1], dilation=[1, 1], ceil_mode=false)
+    (conv2): torch::nn::Conv2d(64, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+    (maxpool2): torch::nn::ReLU()
+    (relu2): torch::nn::MaxPool2d(kernel_size=[3, 3], stride=[2, 2], padding=[1, 1], dilation=[1, 1], ceil_mode=false)
+    (flat): torch::nn::Flatten(start_dim=2, end_dim=3)
+    (transpose): knn::Transpose(dim0=-2, dim1=-1)
+  )
+  (position): knn::Residual(
+    (q1): torch::nn::Sequential(
+      (emb): knn::EmbedPosition(rows=49, cols=128)
+    )
+  )
+  (blocks): knn::SeqList(
+    (0): torch::nn::Sequential(
+      (resid1): knn::Residual(
+        (q1): torch::nn::Sequential(
+          (attn): knn::SelfAttention(dim=128, heads=2, dropout=0.1, norm=true)(
+            (norm): torch::nn::LayerNorm([128], eps=1e-05, elementwise_affine=true)
+            (in): torch::nn::Linear(in_features=128, out_features=384, bias=false)
+            (drop): torch::nn::Dropout(p=0.1, inplace=false)
+            (out): torch::nn::Linear(in_features=128, out_features=128, bias=true)
+          )
+          (drop): knn::DropPath(p=0)
+        )
+      )
+      (resid2): knn::Residual(
+        (q1): torch::nn::Sequential(
+          (norm): torch::nn::LayerNorm([128], eps=1e-05, elementwise_affine=true)
+          (linear1): torch::nn::Linear(in_features=128, out_features=128, bias=true)
+          (gelu): torch::nn::GELU()
+          (linear2): torch::nn::Linear(in_features=128, out_features=128, bias=true)
+          (drop): knn::DropPath(p=0)
+        )
+      )
+    )
+    (1): torch::nn::Sequential(
+      (resid1): knn::Residual(
+        (q1): torch::nn::Sequential(
+          (attn): knn::SelfAttention(dim=128, heads=2, dropout=0.1, norm=true)(
+            (norm): torch::nn::LayerNorm([128], eps=1e-05, elementwise_affine=true)
+            (in): torch::nn::Linear(in_features=128, out_features=384, bias=false)
+            (drop): torch::nn::Dropout(p=0.1, inplace=false)
+            (out): torch::nn::Linear(in_features=128, out_features=128, bias=true)
+          )
+          (drop): knn::DropPath(p=0.1)
+        )
+      )
+      (resid2): knn::Residual(
+        (q1): torch::nn::Sequential(
+          (norm): torch::nn::LayerNorm([128], eps=1e-05, elementwise_affine=true)
+          (linear1): torch::nn::Linear(in_features=128, out_features=128, bias=true)
+          (gelu): torch::nn::GELU()
+          (linear2): torch::nn::Linear(in_features=128, out_features=128, bias=true)
+          (drop): knn::DropPath(p=0.1)
+        )
+      )
+    )
+  )
+  (end): knn::SeqNest(
+    (norm): torch::nn::LayerNorm([128], eps=1e-05, elementwise_affine=true)
+    (join): knn::SeqJoin(
+      (qx): torch::nn::Sequential(
+        (attnpool): torch::nn::Linear(in_features=128, out_features=1, bias=true)
+        (softmax): torch::nn::Softmax(dim=1)
+        (transpose): knn::Transpose(dim0=-2, dim1=-1)
+      )
+      (mul): knn::Matmul()
+    )
+    (squeeze): knn::Squeeze(dim=-2, inplace=false)
+    (fc): torch::nn::Linear(in_features=128, out_features=10, bias=true)
+  )
+)

@@ -1,0 +1,244 @@
+> q examples/vision/avgwide.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+train: 400 batches of 125 images, test: 10 batches of 1000 images
+  1.  lr: 0.080000  loss: 1.618255  test: 1.3669  accuracy: 61.75%   06:12:43
+  2.  lr: 0.079980  loss: 1.231712  test: 1.1425  accuracy: 72.69%   06:13:43
+  3.  lr: 0.079921  loss: 1.077605  test: 1.1375  accuracy: 72.19%   06:14:42
+  4.  lr: 0.079822  loss: 1.000597  test: 1.0627  accuracy: 75.37%   06:15:42
+  5.  lr: 0.079685  loss: 0.949264  test: 0.9492  accuracy: 81.18%   06:16:43
+  6.  lr: 0.079508  loss: 0.912872  test: 1.0391  accuracy: 77.70%   06:17:43
+  7.  lr: 0.079291  loss: 0.886426  test: 0.9343  accuracy: 81.90%   06:18:43
+  8.  lr: 0.079037  loss: 0.864188  test: 0.9156  accuracy: 82.24%   06:19:44
+  9.  lr: 0.078743  loss: 0.849100  test: 0.8966  accuracy: 83.12%   06:20:44
+ 10.  lr: 0.078412  loss: 0.833008  test: 0.8557  accuracy: 85.36%   06:21:45
+ 11.  lr: 0.078042  loss: 0.822919  test: 0.9943  accuracy: 79.31%   06:22:45
+ 12.  lr: 0.077635  loss: 0.810148  test: 0.9223  accuracy: 81.95%   06:23:46
+ 13.  lr: 0.077191  loss: 0.804639  test: 0.8423  accuracy: 85.83%   06:24:46
+ 14.  lr: 0.076710  loss: 0.796153  test: 0.8434  accuracy: 85.97%   06:25:47
+ 15.  lr: 0.076193  loss: 0.789283  test: 0.8311  accuracy: 86.91%   06:26:48
+ 16.  lr: 0.075640  loss: 0.780366  test: 0.9154  accuracy: 83.22%   06:27:48
+ 17.  lr: 0.075052  loss: 0.775195  test: 0.8346  accuracy: 86.03%   06:28:49
+ 18.  lr: 0.074430  loss: 0.769596  test: 0.8623  accuracy: 84.90%   06:29:49
+ 19.  lr: 0.073773  loss: 0.761528  test: 0.9299  accuracy: 82.46%   06:30:49
+ 20.  lr: 0.073083  loss: 0.756534  test: 0.8647  accuracy: 85.40%   06:31:50
+ 21.  lr: 0.072361  loss: 0.752485  test: 0.8025  accuracy: 87.77%   06:32:50
+ 22.  lr: 0.071606  loss: 0.749910  test: 0.8377  accuracy: 86.35%   06:33:51
+ 23.  lr: 0.070821  loss: 0.742687  test: 0.8117  accuracy: 87.24%   06:34:51
+ 24.  lr: 0.070004  loss: 0.741979  test: 0.8962  accuracy: 84.75%   06:35:51
+ 25.  lr: 0.069159  loss: 0.737091  test: 0.8454  accuracy: 86.18%   06:36:52
+ 26.  lr: 0.068284  loss: 0.731020  test: 0.8098  accuracy: 86.87%   06:37:52
+ 27.  lr: 0.067382  loss: 0.732653  test: 0.8004  accuracy: 87.85%   06:38:52
+ 28.  lr: 0.066452  loss: 0.727539  test: 0.7987  accuracy: 87.57%   06:39:53
+ 29.  lr: 0.065497  loss: 0.719138  test: 0.7599  accuracy: 89.88%   06:40:53
+ 30.  lr: 0.064516  loss: 0.718333  test: 0.8197  accuracy: 87.34%   06:41:53
+ 31.  lr: 0.063511  loss: 0.712821  test: 0.7868  accuracy: 88.33%   06:42:54
+ 32.  lr: 0.062483  loss: 0.711494  test: 0.7822  accuracy: 88.44%   06:43:54
+ 33.  lr: 0.061433  loss: 0.702936  test: 0.7842  accuracy: 88.60%   06:44:54
+ 34.  lr: 0.060362  loss: 0.702619  test: 0.7985  accuracy: 88.47%   06:45:54
+ 35.  lr: 0.059270  loss: 0.701669  test: 0.7559  accuracy: 89.83%   06:46:55
+ 36.  lr: 0.058160  loss: 0.696446  test: 0.7779  accuracy: 88.74%   06:47:55
+ 37.  lr: 0.057031  loss: 0.691675  test: 0.7843  accuracy: 88.02%   06:48:55
+ 38.  lr: 0.055886  loss: 0.690714  test: 0.7785  accuracy: 88.61%   06:49:56
+ 39.  lr: 0.054725  loss: 0.687134  test: 0.7608  accuracy: 89.39%   06:50:56
+ 40.  lr: 0.053550  loss: 0.683937  test: 0.7626  accuracy: 89.76%   06:51:56
+ 41.  lr: 0.052361  loss: 0.677282  test: 0.7641  accuracy: 89.65%   06:52:57
+ 42.  lr: 0.051160  loss: 0.676420  test: 0.7459  accuracy: 90.26%   06:53:57
+ 43.  lr: 0.049948  loss: 0.670990  test: 0.8139  accuracy: 87.51%   06:54:57
+ 44.  lr: 0.048726  loss: 0.669958  test: 0.7506  accuracy: 90.23%   06:55:58
+ 45.  lr: 0.047495  loss: 0.663782  test: 0.7459  accuracy: 90.23%   06:56:58
+ 46.  lr: 0.046257  loss: 0.661294  test: 0.7543  accuracy: 90.45%   06:57:58
+ 47.  lr: 0.045013  loss: 0.657544  test: 0.7534  accuracy: 90.65%   06:58:58
+ 48.  lr: 0.043764  loss: 0.650306  test: 0.7513  accuracy: 89.96%   06:59:59
+ 49.  lr: 0.042512  loss: 0.651165  test: 0.7519  accuracy: 90.04%   07:00:59
+ 50.  lr: 0.041256  loss: 0.648232  test: 0.7833  accuracy: 89.26%   07:01:59
+ 51.  lr: 0.040000  loss: 0.645247  test: 0.7032  accuracy: 92.02%   07:03:00
+ 52.  lr: 0.038744  loss: 0.633131  test: 0.7064  accuracy: 92.04%   07:04:00
+ 53.  lr: 0.037488  loss: 0.630467  test: 0.7518  accuracy: 90.28%   07:05:00
+ 54.  lr: 0.036236  loss: 0.628564  test: 0.7329  accuracy: 91.09%   07:06:00
+ 55.  lr: 0.034987  loss: 0.624984  test: 0.7183  accuracy: 92.35%   07:07:01
+ 56.  lr: 0.033743  loss: 0.623428  test: 0.7067  accuracy: 91.74%   07:08:01
+ 57.  lr: 0.032505  loss: 0.621293  test: 0.7400  accuracy: 91.03%   07:09:01
+ 58.  lr: 0.031274  loss: 0.616566  test: 0.7338  accuracy: 91.36%   07:10:02
+ 59.  lr: 0.030052  loss: 0.608070  test: 0.7199  accuracy: 91.46%   07:11:02
+ 60.  lr: 0.028840  loss: 0.602169  test: 0.7857  accuracy: 89.78%   07:12:02
+ 61.  lr: 0.027639  loss: 0.599632  test: 0.7101  accuracy: 92.19%   07:13:02
+ 62.  lr: 0.026450  loss: 0.594767  test: 0.7002  accuracy: 92.57%   07:14:03
+ 63.  lr: 0.025275  loss: 0.588985  test: 0.7236  accuracy: 91.90%   07:15:03
+ 64.  lr: 0.024114  loss: 0.588556  test: 0.6894  accuracy: 92.97%   07:16:03
+ 65.  lr: 0.022969  loss: 0.583923  test: 0.7228  accuracy: 91.84%   07:17:04
+ 66.  lr: 0.021840  loss: 0.579277  test: 0.6993  accuracy: 92.68%   07:18:04
+ 67.  lr: 0.020730  loss: 0.574577  test: 0.6829  accuracy: 93.24%   07:19:04
+ 68.  lr: 0.019638  loss: 0.566243  test: 0.6978  accuracy: 92.55%   07:20:04
+ 69.  lr: 0.018567  loss: 0.567602  test: 0.6809  accuracy: 93.42%   07:21:05
+ 70.  lr: 0.017517  loss: 0.562451  test: 0.6909  accuracy: 93.19%   07:22:05
+ 71.  lr: 0.016489  loss: 0.556361  test: 0.6680  accuracy: 93.78%   07:23:05
+ 72.  lr: 0.015484  loss: 0.548794  test: 0.6632  accuracy: 93.87%   07:24:06
+ 73.  lr: 0.014503  loss: 0.545129  test: 0.6699  accuracy: 93.90%   07:25:06
+ 74.  lr: 0.013548  loss: 0.540625  test: 0.6717  accuracy: 93.85%   07:26:06
+ 75.  lr: 0.012618  loss: 0.537971  test: 0.6566  accuracy: 94.13%   07:27:06
+ 76.  lr: 0.011716  loss: 0.531414  test: 0.6618  accuracy: 94.33%   07:28:07
+ 77.  lr: 0.010841  loss: 0.530969  test: 0.6464  accuracy: 94.87%   07:29:07
+ 78.  lr: 0.009996  loss: 0.524941  test: 0.6543  accuracy: 94.45%   07:30:07
+ 79.  lr: 0.009179  loss: 0.521597  test: 0.6419  accuracy: 94.74%   07:31:08
+ 80.  lr: 0.008394  loss: 0.520339  test: 0.6682  accuracy: 94.28%   07:32:08
+
+weight averaging:
+ 81.  lr: 0.008394  loss: 0.518235  test: 0.6574  accuracy: 94.75%   07:33:08
+ 82.  lr: 0.008394  loss: 0.517754  test: 0.6481  accuracy: 94.74%   07:34:09
+ 83.  lr: 0.008394  loss: 0.518532  test: 0.6581  accuracy: 94.43%   07:35:09
+ 84.  lr: 0.008394  loss: 0.518573  test: 0.6625  accuracy: 94.20%   07:36:09
+ 85.  lr: 0.008394  loss: 0.518149  test: 0.6428  accuracy: 94.90%   07:37:10
+ 86.  lr: 0.008394  loss: 0.519091  test: 0.6512  accuracy: 94.71%   07:38:10
+ 87.  lr: 0.008394  loss: 0.523749  test: 0.6566  accuracy: 94.28%   07:39:10
+ 88.  lr: 0.008394  loss: 0.524153  test: 0.6463  accuracy: 94.74%   07:40:10
+ 89.  lr: 0.008394  loss: 0.522944  test: 0.6660  accuracy: 94.09%   07:41:11
+ 90.  lr: 0.008394  loss: 0.524479  test: 0.6734  accuracy: 94.09%   07:42:11
+ 91.  lr: 0.008394  loss: 0.525870  test: 0.6747  accuracy: 93.65%   07:43:11
+ 92.  lr: 0.008394  loss: 0.527240  test: 0.6594  accuracy: 94.21%   07:44:12
+ 93.  lr: 0.008394  loss: 0.527259  test: 0.6608  accuracy: 94.39%   07:45:12
+ 94.  lr: 0.008394  loss: 0.529377  test: 0.6839  accuracy: 93.56%   07:46:12
+ 95.  lr: 0.008394  loss: 0.531139  test: 0.6812  accuracy: 93.76%   07:47:13
+ 96.  lr: 0.008394  loss: 0.530635  test: 0.6631  accuracy: 94.22%   07:48:13
+ 97.  lr: 0.008394  loss: 0.531114  test: 0.6865  accuracy: 93.40%   07:49:13
+ 98.  lr: 0.008394  loss: 0.533685  test: 0.6735  accuracy: 93.69%   07:50:13
+ 99.  lr: 0.008394  loss: 0.530388  test: 0.6988  accuracy: 92.97%   07:51:14
+100.  lr: 0.008394  loss: 0.530837  test: 0.6712  accuracy: 94.06%   07:52:14
+
+test accuracy using average weights from epoch 81-100:  96.00%
+y          yhat      | n 
+---------------------| --
+cat        dog       | 50
+dog        cat       | 42
+airplane   ship      | 22
+ship       airplane  | 15
+cat        bird      | 15
+truck      automobile| 15
+automobile truck     | 14
+cat        frog      | 12
+bird       deer      | 12
+bird       dog       | 10
+
+> q examples/vision/avgwide.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+train: 400 batches of 125 images, test: 10 batches of 1000 images
+  1.  lr: 0.080000  loss: 1.614458  test: 1.4702  accuracy: 58.59%   09:58:45
+  2.  lr: 0.079980  loss: 1.240914  test: 1.2779  accuracy: 67.36%   09:59:45
+  3.  lr: 0.079921  loss: 1.084612  test: 1.1196  accuracy: 73.30%   10:00:45
+  4.  lr: 0.079822  loss: 0.997273  test: 0.9947  accuracy: 78.76%   10:01:44
+  5.  lr: 0.079685  loss: 0.946591  test: 1.0060  accuracy: 78.47%   10:02:45
+  6.  lr: 0.079508  loss: 0.905732  test: 0.9175  accuracy: 82.38%   10:03:45
+  7.  lr: 0.079291  loss: 0.878933  test: 0.9653  accuracy: 80.27%   10:04:45
+  8.  lr: 0.079037  loss: 0.858970  test: 0.8968  accuracy: 83.45%   10:05:46
+  9.  lr: 0.078743  loss: 0.845490  test: 0.9680  accuracy: 81.08%   10:06:46
+ 10.  lr: 0.078412  loss: 0.830576  test: 0.8718  accuracy: 84.29%   10:07:47
+ 11.  lr: 0.078042  loss: 0.820612  test: 0.8510  accuracy: 85.53%   10:08:47
+ 12.  lr: 0.077635  loss: 0.811554  test: 0.8980  accuracy: 83.89%   10:09:48
+ 13.  lr: 0.077191  loss: 0.801914  test: 0.8996  accuracy: 83.24%   10:10:48
+ 14.  lr: 0.076710  loss: 0.796874  test: 0.8810  accuracy: 84.21%   10:11:49
+ 15.  lr: 0.076193  loss: 0.788002  test: 0.8427  accuracy: 85.88%   10:12:49
+ 16.  lr: 0.075640  loss: 0.780053  test: 0.9370  accuracy: 81.48%   10:13:49
+ 17.  lr: 0.075052  loss: 0.772058  test: 0.8491  accuracy: 85.84%   10:14:50
+ 18.  lr: 0.074430  loss: 0.771235  test: 0.8959  accuracy: 84.42%   10:15:50
+ 19.  lr: 0.073773  loss: 0.763051  test: 0.8107  accuracy: 87.35%   10:16:51
+ 20.  lr: 0.073083  loss: 0.754886  test: 0.9336  accuracy: 83.00%   10:17:51
+ 21.  lr: 0.072361  loss: 0.754430  test: 0.8398  accuracy: 85.80%   10:18:51
+ 22.  lr: 0.071606  loss: 0.750860  test: 0.8771  accuracy: 84.65%   10:19:52
+ 23.  lr: 0.070821  loss: 0.743900  test: 0.8662  accuracy: 85.05%   10:20:52
+ 24.  lr: 0.070004  loss: 0.738643  test: 0.8929  accuracy: 83.91%   10:21:52
+ 25.  lr: 0.069159  loss: 0.737823  test: 0.8039  accuracy: 87.80%   10:22:53
+ 26.  lr: 0.068284  loss: 0.731805  test: 0.8186  accuracy: 86.63%   10:23:53
+ 27.  lr: 0.067382  loss: 0.728717  test: 0.8482  accuracy: 85.46%   10:24:53
+ 28.  lr: 0.066452  loss: 0.725524  test: 0.8222  accuracy: 87.24%   10:25:54
+ 29.  lr: 0.065497  loss: 0.721655  test: 0.7932  accuracy: 88.77%   10:26:54
+ 30.  lr: 0.064516  loss: 0.720167  test: 0.7939  accuracy: 88.75%   10:27:55
+ 31.  lr: 0.063511  loss: 0.711642  test: 0.8127  accuracy: 87.93%   10:28:55
+ 32.  lr: 0.062483  loss: 0.707299  test: 0.8219  accuracy: 87.80%   10:29:55
+ 33.  lr: 0.061433  loss: 0.706509  test: 0.7981  accuracy: 88.54%   10:30:55
+ 34.  lr: 0.060362  loss: 0.699758  test: 0.7734  accuracy: 88.55%   10:31:56
+ 35.  lr: 0.059270  loss: 0.702953  test: 0.7750  accuracy: 89.31%   10:32:56
+ 36.  lr: 0.058160  loss: 0.695033  test: 0.7668  accuracy: 89.67%   10:33:56
+ 37.  lr: 0.057031  loss: 0.694759  test: 0.7815  accuracy: 89.26%   10:34:57
+ 38.  lr: 0.055886  loss: 0.693020  test: 0.7713  accuracy: 89.50%   10:35:57
+ 39.  lr: 0.054725  loss: 0.689544  test: 0.7798  accuracy: 88.97%   10:36:57
+ 40.  lr: 0.053550  loss: 0.682247  test: 0.7964  accuracy: 88.01%   10:37:57
+ 41.  lr: 0.052361  loss: 0.677457  test: 0.8142  accuracy: 87.76%   10:38:58
+ 42.  lr: 0.051160  loss: 0.678472  test: 0.7823  accuracy: 88.99%   10:39:58
+ 43.  lr: 0.049948  loss: 0.673989  test: 0.7796  accuracy: 89.39%   10:40:58
+ 44.  lr: 0.048726  loss: 0.665687  test: 0.7636  accuracy: 90.16%   10:41:59
+ 45.  lr: 0.047495  loss: 0.666696  test: 0.7645  accuracy: 89.91%   10:42:59
+ 46.  lr: 0.046257  loss: 0.659936  test: 0.7599  accuracy: 89.57%   10:43:59
+ 47.  lr: 0.045013  loss: 0.659186  test: 0.7393  accuracy: 90.86%   10:44:59
+ 48.  lr: 0.043764  loss: 0.655698  test: 0.8012  accuracy: 88.67%   10:46:00
+ 49.  lr: 0.042512  loss: 0.649548  test: 0.7350  accuracy: 90.65%   10:47:00
+ 50.  lr: 0.041256  loss: 0.647292  test: 0.7273  accuracy: 91.08%   10:48:00
+ 51.  lr: 0.040000  loss: 0.643505  test: 0.7121  accuracy: 91.79%   10:49:00
+ 52.  lr: 0.038744  loss: 0.637971  test: 0.7133  accuracy: 92.00%   10:50:01
+ 53.  lr: 0.037488  loss: 0.632471  test: 0.7231  accuracy: 91.62%   10:51:01
+ 54.  lr: 0.036236  loss: 0.632416  test: 0.7950  accuracy: 88.86%   10:52:01
+ 55.  lr: 0.034987  loss: 0.623976  test: 0.7287  accuracy: 91.58%   10:53:01
+ 56.  lr: 0.033743  loss: 0.623335  test: 0.7119  accuracy: 91.87%   10:54:02
+ 57.  lr: 0.032505  loss: 0.619851  test: 0.7011  accuracy: 92.35%   10:55:02
+ 58.  lr: 0.031274  loss: 0.612697  test: 0.7291  accuracy: 91.48%   10:56:02
+ 59.  lr: 0.030052  loss: 0.607413  test: 0.7404  accuracy: 90.93%   10:57:03
+ 60.  lr: 0.028840  loss: 0.608055  test: 0.7068  accuracy: 91.94%   10:58:03
+ 61.  lr: 0.027639  loss: 0.600877  test: 0.6893  accuracy: 92.71%   10:59:03
+ 62.  lr: 0.026450  loss: 0.596615  test: 0.7316  accuracy: 91.52%   11:00:03
+ 63.  lr: 0.025275  loss: 0.591756  test: 0.7090  accuracy: 92.01%   11:01:04
+ 64.  lr: 0.024114  loss: 0.587968  test: 0.7364  accuracy: 91.41%   11:02:04
+ 65.  lr: 0.022969  loss: 0.583708  test: 0.7032  accuracy: 92.28%   11:03:04
+ 66.  lr: 0.021840  loss: 0.576274  test: 0.6858  accuracy: 92.76%   11:04:04
+ 67.  lr: 0.020730  loss: 0.574940  test: 0.6914  accuracy: 92.90%   11:05:05
+ 68.  lr: 0.019638  loss: 0.567158  test: 0.6839  accuracy: 93.11%   11:06:05
+ 69.  lr: 0.018567  loss: 0.562403  test: 0.6733  accuracy: 93.41%   11:07:05
+ 70.  lr: 0.017517  loss: 0.560476  test: 0.6823  accuracy: 93.77%   11:08:06
+ 71.  lr: 0.016489  loss: 0.553463  test: 0.6803  accuracy: 93.76%   11:09:06
+ 72.  lr: 0.015484  loss: 0.547754  test: 0.6984  accuracy: 92.82%   11:10:06
+ 73.  lr: 0.014503  loss: 0.545825  test: 0.6838  accuracy: 93.39%   11:11:07
+ 74.  lr: 0.013548  loss: 0.542069  test: 0.6718  accuracy: 93.88%   11:12:07
+ 75.  lr: 0.012618  loss: 0.537458  test: 0.6738  accuracy: 94.05%   11:13:07
+ 76.  lr: 0.011716  loss: 0.535148  test: 0.6660  accuracy: 94.17%   11:14:08
+ 77.  lr: 0.010841  loss: 0.528788  test: 0.6727  accuracy: 93.99%   11:15:08
+ 78.  lr: 0.009996  loss: 0.525637  test: 0.6605  accuracy: 94.40%   11:16:08
+ 79.  lr: 0.009179  loss: 0.522292  test: 0.6567  accuracy: 94.27%   11:17:09
+ 80.  lr: 0.008394  loss: 0.519591  test: 0.6520  accuracy: 94.47%   11:18:09
+
+weight averaging:
+ 81.  lr: 0.007639  loss: 0.517470  test: 0.6534  accuracy: 94.45%   11:19:09
+ 82.  lr: 0.007639  loss: 0.515042  test: 0.6527  accuracy: 94.76%   11:20:09
+ 83.  lr: 0.007639  loss: 0.515793  test: 0.6359  accuracy: 95.18%   11:21:10
+ 84.  lr: 0.007639  loss: 0.516198  test: 0.6541  accuracy: 94.87%   11:22:10
+ 85.  lr: 0.007639  loss: 0.514774  test: 0.6465  accuracy: 94.81%   11:23:10
+ 86.  lr: 0.007639  loss: 0.515756  test: 0.6507  accuracy: 94.72%   11:24:10
+ 87.  lr: 0.007639  loss: 0.513967  test: 0.6582  accuracy: 94.35%   11:25:11
+ 88.  lr: 0.007639  loss: 0.516640  test: 0.6485  accuracy: 94.72%   11:26:11
+ 89.  lr: 0.007639  loss: 0.516044  test: 0.6501  accuracy: 94.56%   11:27:11
+ 90.  lr: 0.007639  loss: 0.519108  test: 0.6578  accuracy: 94.40%   11:28:11
+ 91.  lr: 0.007639  loss: 0.520145  test: 0.6563  accuracy: 94.51%   11:29:12
+ 92.  lr: 0.007639  loss: 0.520161  test: 0.6579  accuracy: 94.61%   11:30:12
+ 93.  lr: 0.007639  loss: 0.521723  test: 0.6602  accuracy: 94.37%   11:31:12
+ 94.  lr: 0.007639  loss: 0.522694  test: 0.6695  accuracy: 93.96%   11:32:12
+ 95.  lr: 0.007639  loss: 0.519902  test: 0.6707  accuracy: 94.15%   11:33:13
+ 96.  lr: 0.007639  loss: 0.526219  test: 0.6737  accuracy: 93.95%   11:34:13
+ 97.  lr: 0.007639  loss: 0.529891  test: 0.6607  accuracy: 94.26%   11:35:13
+ 98.  lr: 0.007639  loss: 0.527179  test: 0.6750  accuracy: 94.09%   11:36:13
+ 99.  lr: 0.007639  loss: 0.529191  test: 0.6643  accuracy: 94.07%   11:37:14
+100.  lr: 0.007639  loss: 0.526481  test: 0.6874  accuracy: 93.52%   11:38:14
+
+test accuracy using average weights from epoch 81-100:  95.99%
+y          yhat      | n 
+---------------------| --
+cat        dog       | 52
+dog        cat       | 42
+truck      automobile| 16
+automobile truck     | 15
+airplane   ship      | 15
+ship       airplane  | 13
+airplane   bird      | 13
+bird       deer      | 12
+bird       frog      | 11
+cat        bird      | 11
+

@@ -1,0 +1,59 @@
+> q examples/mnist/cct.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB 
+
+train: 1200 batches of 50 images, test: 10 batches of 1000 images
+  1.  lr: 0.000500  loss: 1.185084  test: 0.9724  accuracy: 95.56%   06:27:11
+  2.  lr: 0.000499  loss: 0.955268  test: 0.9290  accuracy: 97.29%   06:27:17
+  3.  lr: 0.000497  loss: 0.931445  test: 0.9103  accuracy: 98.03%   06:27:23
+  4.  lr: 0.000493  loss: 0.920255  test: 0.9007  accuracy: 98.58%   06:27:29
+  5.  lr: 0.000488  loss: 0.910929  test: 0.8964  accuracy: 98.69%   06:27:35
+  6.  lr: 0.000481  loss: 0.907726  test: 0.8975  accuracy: 98.56%   06:27:41
+  7.  lr: 0.000473  loss: 0.903580  test: 0.8928  accuracy: 98.82%   06:27:47
+  8.  lr: 0.000463  loss: 0.901429  test: 0.8896  accuracy: 98.92%   06:27:53
+  9.  lr: 0.000452  loss: 0.898634  test: 0.8928  accuracy: 98.76%   06:27:59
+ 10.  lr: 0.000440  loss: 0.896235  test: 0.8945  accuracy: 98.57%   06:28:05
+ 11.  lr: 0.000427  loss: 0.895425  test: 0.8834  accuracy: 99.18%   06:28:11
+ 12.  lr: 0.000412  loss: 0.893116  test: 0.8879  accuracy: 99.04%   06:28:17
+ 13.  lr: 0.000397  loss: 0.891461  test: 0.8809  accuracy: 99.38%   06:28:23
+ 14.  lr: 0.000381  loss: 0.891338  test: 0.8855  accuracy: 99.09%   06:28:29
+ 15.  lr: 0.000363  loss: 0.888713  test: 0.8877  accuracy: 98.97%   06:28:35
+ 16.  lr: 0.000346  loss: 0.887946  test: 0.8814  accuracy: 99.28%   06:28:41
+ 17.  lr: 0.000327  loss: 0.886924  test: 0.8891  accuracy: 98.97%   06:28:47
+ 18.  lr: 0.000308  loss: 0.885633  test: 0.8838  accuracy: 99.19%   06:28:53
+ 19.  lr: 0.000289  loss: 0.885463  test: 0.8815  accuracy: 99.33%   06:28:59
+ 20.  lr: 0.000270  loss: 0.883773  test: 0.8873  accuracy: 99.06%   06:29:05
+ 21.  lr: 0.000250  loss: 0.883418  test: 0.8832  accuracy: 99.18%   06:29:11
+ 22.  lr: 0.000230  loss: 0.881608  test: 0.8794  accuracy: 99.37%   06:29:17
+ 23.  lr: 0.000211  loss: 0.880709  test: 0.8814  accuracy: 99.29%   06:29:23
+ 24.  lr: 0.000192  loss: 0.880445  test: 0.8788  accuracy: 99.44%   06:29:29
+ 25.  lr: 0.000173  loss: 0.878991  test: 0.8776  accuracy: 99.51%   06:29:35
+ 26.  lr: 0.000154  loss: 0.877627  test: 0.8787  accuracy: 99.42%   06:29:41
+ 27.  lr: 0.000137  loss: 0.876904  test: 0.8780  accuracy: 99.46%   06:29:47
+ 28.  lr: 0.000119  loss: 0.876576  test: 0.8778  accuracy: 99.42%   06:29:53
+ 29.  lr: 0.000103  loss: 0.876140  test: 0.8769  accuracy: 99.54%   06:30:00
+ 30.  lr: 0.000088  loss: 0.874846  test: 0.8786  accuracy: 99.46%   06:30:06
+ 31.  lr: 0.000073  loss: 0.874007  test: 0.8772  accuracy: 99.51%   06:30:12
+ 32.  lr: 0.000060  loss: 0.873605  test: 0.8765  accuracy: 99.56%   06:30:18
+ 33.  lr: 0.000048  loss: 0.873097  test: 0.8766  accuracy: 99.55%   06:30:24
+ 34.  lr: 0.000037  loss: 0.872968  test: 0.8767  accuracy: 99.51%   06:30:30
+ 35.  lr: 0.000027  loss: 0.872361  test: 0.8759  accuracy: 99.57%   06:30:36
+ 36.  lr: 0.000019  loss: 0.872133  test: 0.8755  accuracy: 99.63%   06:30:42
+ 37.  lr: 0.000012  loss: 0.871571  test: 0.8754  accuracy: 99.61%   06:30:48
+ 38.  lr: 0.000007  loss: 0.871852  test: 0.8753  accuracy: 99.61%   06:30:54
+ 39.  lr: 0.000003  loss: 0.871857  test: 0.8754  accuracy: 99.61%   06:31:00
+ 40.  lr: 0.000001  loss: 0.871582  test: 0.8755  accuracy: 99.61%   06:31:06
+241619 4195760
+
+mismatches:
+1| 2 7
+2| 0 3 3
+3| 5 5
+4| ,9
+5| 3 3 3 6 9
+6| 0 0 0 1 1 5 8
+7| 1 1 2 2 3 8
+8| 2 2 3 5 9
+9| 4 4 4 4 5 7 7 7
+
+grid of mismatches: examples/mnist/out/cct.png

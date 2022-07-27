@@ -1,0 +1,573 @@
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+> q examples/mnist/simple.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.457296  test accuracy: 97.50%
+  2.  lr: 0.0100  training loss: 0.162994  test accuracy: 95.62%
+  3.  lr: 0.0100  training loss: 0.146229  test accuracy: 97.74%
+  4.  lr: 0.0099  training loss: 0.143240  test accuracy: 98.21%
+  5.  lr: 0.0098  training loss: 0.138893  test accuracy: 98.05%
+  6.  lr: 0.0098  training loss: 0.138815  test accuracy: 98.80%
+  7.  lr: 0.0096  training loss: 0.136260  test accuracy: 96.33%
+  8.  lr: 0.0095  training loss: 0.133210  test accuracy: 98.32%
+  9.  lr: 0.0094  training loss: 0.134966  test accuracy: 99.10%
+ 10.  lr: 0.0092  training loss: 0.133712  test accuracy: 99.03%
+ 11.  lr: 0.0090  training loss: 0.130413  test accuracy: 98.22%
+ 12.  lr: 0.0089  training loss: 0.129147  test accuracy: 98.74%
+ 13.  lr: 0.0086  training loss: 0.129159  test accuracy: 98.08%
+ 14.  lr: 0.0084  training loss: 0.129545  test accuracy: 98.88%
+ 15.  lr: 0.0082  training loss: 0.128989  test accuracy: 99.09%
+ 16.  lr: 0.0079  training loss: 0.130089  test accuracy: 98.30%
+ 17.  lr: 0.0077  training loss: 0.127099  test accuracy: 99.18%
+ 18.  lr: 0.0074  training loss: 0.123896  test accuracy: 98.87%
+ 19.  lr: 0.0071  training loss: 0.125059  test accuracy: 99.18%
+ 20.  lr: 0.0068  training loss: 0.125464  test accuracy: 98.87%
+ 21.  lr: 0.0065  training loss: 0.122740  test accuracy: 98.62%
+ 22.  lr: 0.0062  training loss: 0.120475  test accuracy: 99.17%
+ 23.  lr: 0.0059  training loss: 0.118061  test accuracy: 99.01%
+ 24.  lr: 0.0056  training loss: 0.118753  test accuracy: 99.19%
+ 25.  lr: 0.0053  training loss: 0.118520  test accuracy: 99.24%
+ 26.  lr: 0.0050  training loss: 0.115846  test accuracy: 98.65%
+ 27.  lr: 0.0047  training loss: 0.113895  test accuracy: 98.93%
+ 28.  lr: 0.0044  training loss: 0.113702  test accuracy: 98.97%
+ 29.  lr: 0.0041  training loss: 0.110498  test accuracy: 95.85%
+ 30.  lr: 0.0038  training loss: 0.109990  test accuracy: 99.32%
+ 31.  lr: 0.0035  training loss: 0.107751  test accuracy: 99.28%
+ 32.  lr: 0.0032  training loss: 0.106049  test accuracy: 99.07%
+ 33.  lr: 0.0029  training loss: 0.106390  test accuracy: 99.31%
+ 34.  lr: 0.0026  training loss: 0.102027  test accuracy: 99.52%
+ 35.  lr: 0.0023  training loss: 0.101483  test accuracy: 99.15%
+ 36.  lr: 0.0021  training loss: 0.098445  test accuracy: 99.43%
+ 37.  lr: 0.0018  training loss: 0.097233  test accuracy: 99.41%
+ 38.  lr: 0.0016  training loss: 0.095336  test accuracy: 99.63%
+ 39.  lr: 0.0014  training loss: 0.092660  test accuracy: 99.46%
+ 40.  lr: 0.0011  training loss: 0.091896  test accuracy: 99.39%
+ 41.  lr: 0.0010  training loss: 0.089792  test accuracy: 99.54%
+ 42.  lr: 0.0008  training loss: 0.087681  test accuracy: 99.62%
+ 43.  lr: 0.0006  training loss: 0.086547  test accuracy: 99.63%
+ 44.  lr: 0.0005  training loss: 0.084647  test accuracy: 99.59%
+ 45.  lr: 0.0004  training loss: 0.083453  test accuracy: 99.65%
+ 46.  lr: 0.0002  training loss: 0.081979  test accuracy: 99.70%
+ 47.  lr: 0.0002  training loss: 0.081820  test accuracy: 99.70%
+ 48.  lr: 0.0001  training loss: 0.080806  test accuracy: 99.71%
+ 49.  lr: 0.0000  training loss: 0.079980  test accuracy: 99.71%
+ 50.  lr: 0.0000  training loss: 0.080251  test accuracy: 99.72%
+835264 4195744
+
+mismatches:
+2| 0 7 7 7
+3| 1 5
+4| 9 9
+5| 3 3 6
+6| 0 1 8 8
+7| 1 1 2 2
+8| 2 2 5 9
+9| 4 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png
+
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+> q examples/mnist/simple.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB 
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.481770  test accuracy: 94.67%
+  2.  lr: 0.0100  training loss: 0.161616  test accuracy: 98.67%
+  3.  lr: 0.0100  training loss: 0.148761  test accuracy: 95.42%
+  4.  lr: 0.0099  training loss: 0.141785  test accuracy: 98.76%
+  5.  lr: 0.0098  training loss: 0.139701  test accuracy: 97.59%
+  6.  lr: 0.0098  training loss: 0.138900  test accuracy: 98.90%
+  7.  lr: 0.0096  training loss: 0.136908  test accuracy: 97.36%
+  8.  lr: 0.0095  training loss: 0.134906  test accuracy: 98.98%
+  9.  lr: 0.0094  training loss: 0.132280  test accuracy: 98.38%
+ 10.  lr: 0.0092  training loss: 0.131725  test accuracy: 98.76%
+ 11.  lr: 0.0090  training loss: 0.132795  test accuracy: 97.21%
+ 12.  lr: 0.0089  training loss: 0.131558  test accuracy: 98.26%
+ 13.  lr: 0.0086  training loss: 0.131885  test accuracy: 98.04%
+ 14.  lr: 0.0084  training loss: 0.129635  test accuracy: 98.70%
+ 15.  lr: 0.0082  training loss: 0.129576  test accuracy: 98.89%
+ 16.  lr: 0.0079  training loss: 0.126976  test accuracy: 97.01%
+ 17.  lr: 0.0077  training loss: 0.126496  test accuracy: 98.42%
+ 18.  lr: 0.0074  training loss: 0.125673  test accuracy: 99.05%
+ 19.  lr: 0.0071  training loss: 0.124200  test accuracy: 98.60%
+ 20.  lr: 0.0068  training loss: 0.123418  test accuracy: 98.69%
+ 21.  lr: 0.0065  training loss: 0.122756  test accuracy: 99.18%
+ 22.  lr: 0.0062  training loss: 0.122663  test accuracy: 99.23%
+ 23.  lr: 0.0059  training loss: 0.119659  test accuracy: 98.13%
+ 24.  lr: 0.0056  training loss: 0.118784  test accuracy: 97.66%
+ 25.  lr: 0.0053  training loss: 0.115283  test accuracy: 99.29%
+ 26.  lr: 0.0050  training loss: 0.114467  test accuracy: 98.77%
+ 27.  lr: 0.0047  training loss: 0.115032  test accuracy: 99.22%
+ 28.  lr: 0.0044  training loss: 0.112958  test accuracy: 98.93%
+ 29.  lr: 0.0041  training loss: 0.111142  test accuracy: 99.22%
+ 30.  lr: 0.0038  training loss: 0.109047  test accuracy: 99.19%
+ 31.  lr: 0.0035  training loss: 0.107866  test accuracy: 99.24%
+ 32.  lr: 0.0032  training loss: 0.105948  test accuracy: 99.13%
+ 33.  lr: 0.0029  training loss: 0.104335  test accuracy: 99.42%
+ 34.  lr: 0.0026  training loss: 0.102134  test accuracy: 99.25%
+ 35.  lr: 0.0023  training loss: 0.099874  test accuracy: 99.25%
+ 36.  lr: 0.0021  training loss: 0.098493  test accuracy: 99.56%
+ 37.  lr: 0.0018  training loss: 0.095825  test accuracy: 99.47%
+ 38.  lr: 0.0016  training loss: 0.095224  test accuracy: 99.48%
+ 39.  lr: 0.0014  training loss: 0.093161  test accuracy: 99.46%
+ 40.  lr: 0.0011  training loss: 0.091107  test accuracy: 99.52%
+ 41.  lr: 0.0010  training loss: 0.088964  test accuracy: 99.56%
+ 42.  lr: 0.0008  training loss: 0.087878  test accuracy: 99.48%
+ 43.  lr: 0.0006  training loss: 0.085611  test accuracy: 99.62%
+ 44.  lr: 0.0005  training loss: 0.084689  test accuracy: 99.63%
+ 45.  lr: 0.0004  training loss: 0.083604  test accuracy: 99.65%
+ 46.  lr: 0.0002  training loss: 0.082125  test accuracy: 99.68%
+ 47.  lr: 0.0002  training loss: 0.081264  test accuracy: 99.69%
+ 48.  lr: 0.0001  training loss: 0.080856  test accuracy: 99.69%
+ 49.  lr: 0.0000  training loss: 0.079951  test accuracy: 99.70%
+ 50.  lr: 0.0000  training loss: 0.080100  test accuracy: 99.69%
+846279 4195744
+
+mismatches:
+2| 0 6 7 7
+3| 1 5
+4| 9 9
+5| 3 3 3 6 7
+6| 0 1 4 8 8
+7| 1 1 2 2
+8| 2 2 5 9
+9| 4 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png
+
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+> q examples/mnist/simple.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.459168  test accuracy: 97.21%
+  2.  lr: 0.0100  training loss: 0.167259  test accuracy: 97.58%
+  3.  lr: 0.0100  training loss: 0.149750  test accuracy: 98.62%
+  4.  lr: 0.0099  training loss: 0.144164  test accuracy: 97.87%
+  5.  lr: 0.0098  training loss: 0.140549  test accuracy: 99.05%
+  6.  lr: 0.0098  training loss: 0.138828  test accuracy: 98.54%
+  7.  lr: 0.0096  training loss: 0.137261  test accuracy: 95.81%
+  8.  lr: 0.0095  training loss: 0.136369  test accuracy: 97.02%
+  9.  lr: 0.0094  training loss: 0.134199  test accuracy: 97.54%
+ 10.  lr: 0.0092  training loss: 0.132522  test accuracy: 99.22%
+ 11.  lr: 0.0090  training loss: 0.131457  test accuracy: 97.77%
+ 12.  lr: 0.0089  training loss: 0.131914  test accuracy: 99.09%
+ 13.  lr: 0.0086  training loss: 0.130248  test accuracy: 98.31%
+ 14.  lr: 0.0084  training loss: 0.128785  test accuracy: 98.61%
+ 15.  lr: 0.0082  training loss: 0.127853  test accuracy: 98.98%
+ 16.  lr: 0.0079  training loss: 0.128143  test accuracy: 98.73%
+ 17.  lr: 0.0077  training loss: 0.126043  test accuracy: 97.96%
+ 18.  lr: 0.0074  training loss: 0.125954  test accuracy: 98.71%
+ 19.  lr: 0.0071  training loss: 0.122836  test accuracy: 98.46%
+ 20.  lr: 0.0068  training loss: 0.122750  test accuracy: 98.56%
+ 21.  lr: 0.0065  training loss: 0.121463  test accuracy: 98.83%
+ 22.  lr: 0.0062  training loss: 0.120880  test accuracy: 98.94%
+ 23.  lr: 0.0059  training loss: 0.118921  test accuracy: 98.99%
+ 24.  lr: 0.0056  training loss: 0.117398  test accuracy: 98.67%
+ 25.  lr: 0.0053  training loss: 0.115957  test accuracy: 98.77%
+ 26.  lr: 0.0050  training loss: 0.114903  test accuracy: 99.23%
+ 27.  lr: 0.0047  training loss: 0.113495  test accuracy: 99.16%
+ 28.  lr: 0.0044  training loss: 0.111329  test accuracy: 99.20%
+ 29.  lr: 0.0041  training loss: 0.109704  test accuracy: 99.07%
+ 30.  lr: 0.0038  training loss: 0.108890  test accuracy: 99.05%
+ 31.  lr: 0.0035  training loss: 0.106647  test accuracy: 99.50%
+ 32.  lr: 0.0032  training loss: 0.104218  test accuracy: 99.44%
+ 33.  lr: 0.0029  training loss: 0.102753  test accuracy: 99.33%
+ 34.  lr: 0.0026  training loss: 0.101991  test accuracy: 99.15%
+ 35.  lr: 0.0023  training loss: 0.099362  test accuracy: 99.24%
+ 36.  lr: 0.0021  training loss: 0.098821  test accuracy: 99.49%
+ 37.  lr: 0.0018  training loss: 0.094849  test accuracy: 99.40%
+ 38.  lr: 0.0016  training loss: 0.093309  test accuracy: 99.53%
+ 39.  lr: 0.0014  training loss: 0.092114  test accuracy: 99.59%
+ 40.  lr: 0.0011  training loss: 0.091035  test accuracy: 99.39%
+ 41.  lr: 0.0010  training loss: 0.088029  test accuracy: 99.60%
+ 42.  lr: 0.0008  training loss: 0.087130  test accuracy: 99.51%
+ 43.  lr: 0.0006  training loss: 0.085748  test accuracy: 99.65%
+ 44.  lr: 0.0005  training loss: 0.083584  test accuracy: 99.67%
+ 45.  lr: 0.0004  training loss: 0.082653  test accuracy: 99.71%
+ 46.  lr: 0.0002  training loss: 0.081534  test accuracy: 99.67%
+ 47.  lr: 0.0002  training loss: 0.080559  test accuracy: 99.64%
+ 48.  lr: 0.0001  training loss: 0.080085  test accuracy: 99.67%
+ 49.  lr: 0.0000  training loss: 0.079676  test accuracy: 99.65%
+ 50.  lr: 0.0000  training loss: 0.079560  test accuracy: 99.66%
+839040 4195744
+
+mismatches:
+2| 0 7 7
+3| 1 5
+4| 6 9 9 9 9
+5| 3 3 3 3 3 6 7 7
+6| 0 5
+7| 1 1 2 2
+8| 2 2 3 5 9
+9| 4 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png
+
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.459068  test accuracy: 94.69%
+  2.  lr: 0.0100  training loss: 0.175421  test accuracy: 92.61%
+  3.  lr: 0.0100  training loss: 0.152892  test accuracy: 98.92%
+  4.  lr: 0.0099  training loss: 0.146043  test accuracy: 98.15%
+  5.  lr: 0.0098  training loss: 0.144720  test accuracy: 98.04%
+  6.  lr: 0.0098  training loss: 0.140361  test accuracy: 98.67%
+  7.  lr: 0.0096  training loss: 0.138057  test accuracy: 97.45%
+  8.  lr: 0.0095  training loss: 0.136519  test accuracy: 98.52%
+  9.  lr: 0.0094  training loss: 0.134613  test accuracy: 97.08%
+ 10.  lr: 0.0092  training loss: 0.134182  test accuracy: 98.90%
+ 11.  lr: 0.0090  training loss: 0.132418  test accuracy: 97.70%
+ 12.  lr: 0.0089  training loss: 0.132535  test accuracy: 97.39%
+ 13.  lr: 0.0086  training loss: 0.129800  test accuracy: 98.50%
+ 14.  lr: 0.0084  training loss: 0.129531  test accuracy: 98.58%
+ 15.  lr: 0.0082  training loss: 0.127810  test accuracy: 96.09%
+ 16.  lr: 0.0079  training loss: 0.127964  test accuracy: 98.97%
+ 17.  lr: 0.0077  training loss: 0.127331  test accuracy: 99.15%
+ 18.  lr: 0.0074  training loss: 0.125713  test accuracy: 98.35%
+ 19.  lr: 0.0071  training loss: 0.125311  test accuracy: 98.98%
+ 20.  lr: 0.0068  training loss: 0.124937  test accuracy: 99.04%
+ 21.  lr: 0.0065  training loss: 0.121666  test accuracy: 65.47%
+ 22.  lr: 0.0062  training loss: 0.122026  test accuracy: 98.98%
+ 23.  lr: 0.0059  training loss: 0.118679  test accuracy: 98.76%
+ 24.  lr: 0.0056  training loss: 0.117488  test accuracy: 98.93%
+ 25.  lr: 0.0053  training loss: 0.117628  test accuracy: 98.77%
+ 26.  lr: 0.0050  training loss: 0.115354  test accuracy: 98.97%
+ 27.  lr: 0.0047  training loss: 0.113245  test accuracy: 99.34%
+ 28.  lr: 0.0044  training loss: 0.111840  test accuracy: 99.16%
+ 29.  lr: 0.0041  training loss: 0.110893  test accuracy: 99.25%
+ 30.  lr: 0.0038  training loss: 0.108737  test accuracy: 99.23%
+ 31.  lr: 0.0035  training loss: 0.107237  test accuracy: 98.66%
+ 32.  lr: 0.0032  training loss: 0.105315  test accuracy: 99.22%
+ 33.  lr: 0.0029  training loss: 0.103990  test accuracy: 99.51%
+ 34.  lr: 0.0026  training loss: 0.101935  test accuracy: 99.21%
+ 35.  lr: 0.0023  training loss: 0.099865  test accuracy: 99.28%
+ 36.  lr: 0.0021  training loss: 0.097911  test accuracy: 99.27%
+ 37.  lr: 0.0018  training loss: 0.096918  test accuracy: 99.54%
+ 38.  lr: 0.0016  training loss: 0.094765  test accuracy: 99.47%
+ 39.  lr: 0.0014  training loss: 0.093513  test accuracy: 99.46%
+ 40.  lr: 0.0011  training loss: 0.090566  test accuracy: 99.46%
+ 41.  lr: 0.0010  training loss: 0.089217  test accuracy: 99.61%
+ 42.  lr: 0.0008  training loss: 0.087610  test accuracy: 99.52%
+ 43.  lr: 0.0006  training loss: 0.086677  test accuracy: 99.64%
+ 44.  lr: 0.0005  training loss: 0.084112  test accuracy: 99.61%
+ 45.  lr: 0.0004  training loss: 0.083114  test accuracy: 99.61%
+ 46.  lr: 0.0002  training loss: 0.081999  test accuracy: 99.64%
+ 47.  lr: 0.0002  training loss: 0.080515  test accuracy: 99.69%
+ 48.  lr: 0.0001  training loss: 0.080380  test accuracy: 99.65%
+ 49.  lr: 0.0000  training loss: 0.079942  test accuracy: 99.69%
+ 50.  lr: 0.0000  training loss: 0.079579  test accuracy: 99.67%
+837514 4195744
+
+mismatches:
+2| 0 7 7
+3| 1 5 5
+4| 6 9 9
+5| 3 3 3 6 7
+6| 0 0 0 5
+7| 1 1 2 2 2 2
+8| 2 2 3 5 9
+9| 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png
+
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.551245  test accuracy: 92.32%
+  2.  lr: 0.0100  training loss: 0.169410  test accuracy: 97.25%
+  3.  lr: 0.0100  training loss: 0.154225  test accuracy: 91.39%
+  4.  lr: 0.0099  training loss: 0.148150  test accuracy: 97.71%
+  5.  lr: 0.0098  training loss: 0.143635  test accuracy: 97.05%
+  6.  lr: 0.0098  training loss: 0.142548  test accuracy: 97.04%
+  7.  lr: 0.0096  training loss: 0.139364  test accuracy: 97.90%
+  8.  lr: 0.0095  training loss: 0.137005  test accuracy: 98.66%
+  9.  lr: 0.0094  training loss: 0.138004  test accuracy: 98.56%
+ 10.  lr: 0.0092  training loss: 0.135684  test accuracy: 98.32%
+ 11.  lr: 0.0090  training loss: 0.135699  test accuracy: 98.79%
+ 12.  lr: 0.0089  training loss: 0.132928  test accuracy: 97.96%
+ 13.  lr: 0.0086  training loss: 0.133741  test accuracy: 97.69%
+ 14.  lr: 0.0084  training loss: 0.129620  test accuracy: 97.94%
+ 15.  lr: 0.0082  training loss: 0.130009  test accuracy: 99.11%
+ 16.  lr: 0.0079  training loss: 0.129102  test accuracy: 98.92%
+ 17.  lr: 0.0077  training loss: 0.127426  test accuracy: 98.98%
+ 18.  lr: 0.0074  training loss: 0.127182  test accuracy: 99.21%
+ 19.  lr: 0.0071  training loss: 0.125723  test accuracy: 98.89%
+ 20.  lr: 0.0068  training loss: 0.121239  test accuracy: 98.59%
+ 21.  lr: 0.0065  training loss: 0.122162  test accuracy: 99.08%
+ 22.  lr: 0.0062  training loss: 0.122277  test accuracy: 99.06%
+ 23.  lr: 0.0059  training loss: 0.119541  test accuracy: 98.95%
+ 24.  lr: 0.0056  training loss: 0.118613  test accuracy: 98.60%
+ 25.  lr: 0.0053  training loss: 0.117648  test accuracy: 98.80%
+ 26.  lr: 0.0050  training loss: 0.115177  test accuracy: 98.69%
+ 27.  lr: 0.0047  training loss: 0.114529  test accuracy: 99.10%
+ 28.  lr: 0.0044  training loss: 0.113151  test accuracy: 99.16%
+ 29.  lr: 0.0041  training loss: 0.110385  test accuracy: 99.10%
+ 30.  lr: 0.0038  training loss: 0.110124  test accuracy: 99.02%
+ 31.  lr: 0.0035  training loss: 0.106910  test accuracy: 99.05%
+ 32.  lr: 0.0032  training loss: 0.106089  test accuracy: 99.27%
+ 33.  lr: 0.0029  training loss: 0.104995  test accuracy: 99.26%
+ 34.  lr: 0.0026  training loss: 0.101526  test accuracy: 99.36%
+ 35.  lr: 0.0023  training loss: 0.101216  test accuracy: 99.57%
+ 36.  lr: 0.0021  training loss: 0.098007  test accuracy: 99.56%
+ 37.  lr: 0.0018  training loss: 0.096783  test accuracy: 99.46%
+ 38.  lr: 0.0016  training loss: 0.094713  test accuracy: 99.56%
+ 39.  lr: 0.0014  training loss: 0.092966  test accuracy: 99.34%
+ 40.  lr: 0.0011  training loss: 0.090866  test accuracy: 99.45%
+ 41.  lr: 0.0010  training loss: 0.089464  test accuracy: 99.62%
+ 42.  lr: 0.0008  training loss: 0.087876  test accuracy: 99.67%
+ 43.  lr: 0.0006  training loss: 0.086280  test accuracy: 99.57%
+ 44.  lr: 0.0005  training loss: 0.084948  test accuracy: 99.63%
+ 45.  lr: 0.0004  training loss: 0.083264  test accuracy: 99.65%
+ 46.  lr: 0.0002  training loss: 0.081461  test accuracy: 99.66%
+ 47.  lr: 0.0002  training loss: 0.081445  test accuracy: 99.66%
+ 48.  lr: 0.0001  training loss: 0.079980  test accuracy: 99.69%
+ 49.  lr: 0.0000  training loss: 0.079852  test accuracy: 99.70%
+ 50.  lr: 0.0000  training loss: 0.080063  test accuracy: 99.70%
+846212 4195744
+
+mismatches:
+2| 0 7 7
+3| 1 5 5
+4| 9 9
+5| 3 3 3 6 7
+6| 0 0 1 4 5
+7| 1 2 2
+8| 2 2 5 9
+9| 4 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png
+
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.503814  test accuracy: 96.09%
+  2.  lr: 0.0100  training loss: 0.170517  test accuracy: 98.01%
+  3.  lr: 0.0100  training loss: 0.151681  test accuracy: 98.45%
+  4.  lr: 0.0099  training loss: 0.143727  test accuracy: 96.22%
+  5.  lr: 0.0098  training loss: 0.141134  test accuracy: 98.99%
+  6.  lr: 0.0098  training loss: 0.139059  test accuracy: 96.38%
+  7.  lr: 0.0096  training loss: 0.137572  test accuracy: 97.51%
+  8.  lr: 0.0095  training loss: 0.136517  test accuracy: 99.19%
+  9.  lr: 0.0094  training loss: 0.133928  test accuracy: 98.85%
+ 10.  lr: 0.0092  training loss: 0.133826  test accuracy: 98.41%
+ 11.  lr: 0.0090  training loss: 0.132119  test accuracy: 98.54%
+ 12.  lr: 0.0089  training loss: 0.131225  test accuracy: 98.34%
+ 13.  lr: 0.0086  training loss: 0.130851  test accuracy: 98.70%
+ 14.  lr: 0.0084  training loss: 0.130042  test accuracy: 98.90%
+ 15.  lr: 0.0082  training loss: 0.127815  test accuracy: 98.95%
+ 16.  lr: 0.0079  training loss: 0.128427  test accuracy: 98.71%
+ 17.  lr: 0.0077  training loss: 0.125529  test accuracy: 98.70%
+ 18.  lr: 0.0074  training loss: 0.124170  test accuracy: 98.83%
+ 19.  lr: 0.0071  training loss: 0.125717  test accuracy: 99.31%
+ 20.  lr: 0.0068  training loss: 0.122113  test accuracy: 98.54%
+ 21.  lr: 0.0065  training loss: 0.123411  test accuracy: 98.64%
+ 22.  lr: 0.0062  training loss: 0.120796  test accuracy: 98.74%
+ 23.  lr: 0.0059  training loss: 0.119612  test accuracy: 98.69%
+ 24.  lr: 0.0056  training loss: 0.117979  test accuracy: 98.76%
+ 25.  lr: 0.0053  training loss: 0.116191  test accuracy: 99.41%
+ 26.  lr: 0.0050  training loss: 0.114697  test accuracy: 96.35%
+ 27.  lr: 0.0047  training loss: 0.114991  test accuracy: 99.04%
+ 28.  lr: 0.0044  training loss: 0.111548  test accuracy: 99.10%
+ 29.  lr: 0.0041  training loss: 0.111388  test accuracy: 98.64%
+ 30.  lr: 0.0038  training loss: 0.108784  test accuracy: 98.73%
+ 31.  lr: 0.0035  training loss: 0.107200  test accuracy: 99.23%
+ 32.  lr: 0.0032  training loss: 0.105369  test accuracy: 99.37%
+ 33.  lr: 0.0029  training loss: 0.104339  test accuracy: 99.33%
+ 34.  lr: 0.0026  training loss: 0.101454  test accuracy: 99.47%
+ 35.  lr: 0.0023  training loss: 0.099612  test accuracy: 99.06%
+ 36.  lr: 0.0021  training loss: 0.098211  test accuracy: 99.40%
+ 37.  lr: 0.0018  training loss: 0.095821  test accuracy: 99.40%
+ 38.  lr: 0.0016  training loss: 0.094363  test accuracy: 99.38%
+ 39.  lr: 0.0014  training loss: 0.092557  test accuracy: 99.42%
+ 40.  lr: 0.0011  training loss: 0.090282  test accuracy: 99.60%
+ 41.  lr: 0.0010  training loss: 0.088823  test accuracy: 99.37%
+ 42.  lr: 0.0008  training loss: 0.087770  test accuracy: 99.60%
+ 43.  lr: 0.0006  training loss: 0.085858  test accuracy: 99.56%
+ 44.  lr: 0.0005  training loss: 0.083802  test accuracy: 99.62%
+ 45.  lr: 0.0004  training loss: 0.082195  test accuracy: 99.64%
+ 46.  lr: 0.0002  training loss: 0.081802  test accuracy: 99.62%
+ 47.  lr: 0.0002  training loss: 0.080888  test accuracy: 99.70%
+ 48.  lr: 0.0001  training loss: 0.080468  test accuracy: 99.67%
+ 49.  lr: 0.0000  training loss: 0.080187  test accuracy: 99.67%
+ 50.  lr: 0.0000  training loss: 0.079796  test accuracy: 99.68%
+837557 4195744
+
+mismatches:
+0| ,7
+2| 0 7 7 7
+3| 1 5 8
+4| 9 9
+5| 3 3 6
+6| 0 1 1 1 4 8
+7| 1 1 2 2
+8| 1 2 9
+9| 4 4 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png
+
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.495066  test accuracy: 97.99%
+  2.  lr: 0.0100  training loss: 0.167172  test accuracy: 97.69%
+  3.  lr: 0.0100  training loss: 0.151912  test accuracy: 98.83%
+  4.  lr: 0.0099  training loss: 0.145024  test accuracy: 97.92%
+  5.  lr: 0.0098  training loss: 0.140506  test accuracy: 97.69%
+  6.  lr: 0.0098  training loss: 0.139450  test accuracy: 96.05%
+  7.  lr: 0.0096  training loss: 0.137483  test accuracy: 99.08%
+  8.  lr: 0.0095  training loss: 0.135203  test accuracy: 98.89%
+  9.  lr: 0.0094  training loss: 0.134627  test accuracy: 98.27%
+ 10.  lr: 0.0092  training loss: 0.136143  test accuracy: 98.55%
+ 11.  lr: 0.0090  training loss: 0.133497  test accuracy: 98.64%
+ 12.  lr: 0.0089  training loss: 0.132766  test accuracy: 98.93%
+ 13.  lr: 0.0086  training loss: 0.131580  test accuracy: 98.74%
+ 14.  lr: 0.0084  training loss: 0.128990  test accuracy: 98.40%
+ 15.  lr: 0.0082  training loss: 0.129007  test accuracy: 98.41%
+ 16.  lr: 0.0079  training loss: 0.128647  test accuracy: 98.84%
+ 17.  lr: 0.0077  training loss: 0.126919  test accuracy: 98.43%
+ 18.  lr: 0.0074  training loss: 0.125911  test accuracy: 98.77%
+ 19.  lr: 0.0071  training loss: 0.125441  test accuracy: 98.92%
+ 20.  lr: 0.0068  training loss: 0.122786  test accuracy: 98.95%
+ 21.  lr: 0.0065  training loss: 0.122036  test accuracy: 96.48%
+ 22.  lr: 0.0062  training loss: 0.121762  test accuracy: 99.15%
+ 23.  lr: 0.0059  training loss: 0.119609  test accuracy: 98.72%
+ 24.  lr: 0.0056  training loss: 0.118166  test accuracy: 98.97%
+ 25.  lr: 0.0053  training loss: 0.117999  test accuracy: 99.38%
+ 26.  lr: 0.0050  training loss: 0.114677  test accuracy: 98.97%
+ 27.  lr: 0.0047  training loss: 0.113169  test accuracy: 98.64%
+ 28.  lr: 0.0044  training loss: 0.111487  test accuracy: 99.21%
+ 29.  lr: 0.0041  training loss: 0.110451  test accuracy: 99.10%
+ 30.  lr: 0.0038  training loss: 0.108656  test accuracy: 99.37%
+ 31.  lr: 0.0035  training loss: 0.107186  test accuracy: 99.01%
+ 32.  lr: 0.0032  training loss: 0.105116  test accuracy: 99.20%
+ 33.  lr: 0.0029  training loss: 0.103677  test accuracy: 99.20%
+ 34.  lr: 0.0026  training loss: 0.102213  test accuracy: 99.26%
+ 35.  lr: 0.0023  training loss: 0.100795  test accuracy: 99.08%
+ 36.  lr: 0.0021  training loss: 0.099154  test accuracy: 99.44%
+ 37.  lr: 0.0018  training loss: 0.097334  test accuracy: 99.30%
+ 38.  lr: 0.0016  training loss: 0.094412  test accuracy: 99.46%
+ 39.  lr: 0.0014  training loss: 0.092566  test accuracy: 99.35%
+ 40.  lr: 0.0011  training loss: 0.091381  test accuracy: 99.65%
+ 41.  lr: 0.0010  training loss: 0.088872  test accuracy: 99.52%
+ 42.  lr: 0.0008  training loss: 0.088141  test accuracy: 99.64%
+ 43.  lr: 0.0006  training loss: 0.086182  test accuracy: 99.62%
+ 44.  lr: 0.0005  training loss: 0.084050  test accuracy: 99.67%
+ 45.  lr: 0.0004  training loss: 0.083307  test accuracy: 99.72%
+ 46.  lr: 0.0002  training loss: 0.081710  test accuracy: 99.66%
+ 47.  lr: 0.0002  training loss: 0.081489  test accuracy: 99.73%
+ 48.  lr: 0.0001  training loss: 0.081066  test accuracy: 99.71%
+ 49.  lr: 0.0000  training loss: 0.080275  test accuracy: 99.71%
+ 50.  lr: 0.0000  training loss: 0.080299  test accuracy: 99.70%
+837461 4195744
+
+mismatches:
+0| ,7
+2| 0 7 7
+3| 1 5
+4| 9 9 9
+5| 3 3 3 6
+6| 0 0 1 1 8 8
+7| 1 1 2
+8| 2 2 5 9
+9| 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png
+
+======================================
+Run on NVIDIA GeForce GTX 1080 Ti GPU:
+======================================
+> q examples/mnist/simple.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epochs: 50, batch size: 100, iterations per epoch: 600
+  1.  lr: 0.0100  training loss: 0.506551  test accuracy: 98.30%
+  2.  lr: 0.0100  training loss: 0.167533  test accuracy: 96.81%
+  3.  lr: 0.0100  training loss: 0.150341  test accuracy: 97.42%
+  4.  lr: 0.0099  training loss: 0.142503  test accuracy: 98.36%
+  5.  lr: 0.0098  training loss: 0.139843  test accuracy: 98.82%
+  6.  lr: 0.0098  training loss: 0.135895  test accuracy: 99.08%
+  7.  lr: 0.0096  training loss: 0.136781  test accuracy: 98.46%
+  8.  lr: 0.0095  training loss: 0.134337  test accuracy: 98.45%
+  9.  lr: 0.0094  training loss: 0.133155  test accuracy: 97.07%
+ 10.  lr: 0.0092  training loss: 0.133237  test accuracy: 98.50%
+ 11.  lr: 0.0090  training loss: 0.132716  test accuracy: 96.86%
+ 12.  lr: 0.0089  training loss: 0.131198  test accuracy: 97.04%
+ 13.  lr: 0.0086  training loss: 0.129995  test accuracy: 98.02%
+ 14.  lr: 0.0084  training loss: 0.126307  test accuracy: 97.81%
+ 15.  lr: 0.0082  training loss: 0.127313  test accuracy: 98.77%
+ 16.  lr: 0.0079  training loss: 0.128426  test accuracy: 98.98%
+ 17.  lr: 0.0077  training loss: 0.125908  test accuracy: 99.04%
+ 18.  lr: 0.0074  training loss: 0.124338  test accuracy: 98.84%
+ 19.  lr: 0.0071  training loss: 0.121318  test accuracy: 99.05%
+ 20.  lr: 0.0068  training loss: 0.122140  test accuracy: 99.23%
+ 21.  lr: 0.0065  training loss: 0.121219  test accuracy: 99.16%
+ 22.  lr: 0.0062  training loss: 0.120096  test accuracy: 99.07%
+ 23.  lr: 0.0059  training loss: 0.117774  test accuracy: 96.21%
+ 24.  lr: 0.0056  training loss: 0.117931  test accuracy: 98.57%
+ 25.  lr: 0.0053  training loss: 0.115618  test accuracy: 99.01%
+ 26.  lr: 0.0050  training loss: 0.114737  test accuracy: 99.04%
+ 27.  lr: 0.0047  training loss: 0.112435  test accuracy: 99.00%
+ 28.  lr: 0.0044  training loss: 0.111170  test accuracy: 98.58%
+ 29.  lr: 0.0041  training loss: 0.109370  test accuracy: 98.79%
+ 30.  lr: 0.0038  training loss: 0.106763  test accuracy: 99.03%
+ 31.  lr: 0.0035  training loss: 0.106373  test accuracy: 99.03%
+ 32.  lr: 0.0032  training loss: 0.104366  test accuracy: 99.34%
+ 33.  lr: 0.0029  training loss: 0.103027  test accuracy: 99.46%
+ 34.  lr: 0.0026  training loss: 0.100275  test accuracy: 99.30%
+ 35.  lr: 0.0023  training loss: 0.098754  test accuracy: 99.14%
+ 36.  lr: 0.0021  training loss: 0.097103  test accuracy: 99.41%
+ 37.  lr: 0.0018  training loss: 0.095619  test accuracy: 99.34%
+ 38.  lr: 0.0016  training loss: 0.094148  test accuracy: 99.53%
+ 39.  lr: 0.0014  training loss: 0.091680  test accuracy: 99.49%
+ 40.  lr: 0.0011  training loss: 0.089273  test accuracy: 99.45%
+ 41.  lr: 0.0010  training loss: 0.088069  test accuracy: 99.59%
+ 42.  lr: 0.0008  training loss: 0.086266  test accuracy: 99.57%
+ 43.  lr: 0.0006  training loss: 0.084528  test accuracy: 99.58%
+ 44.  lr: 0.0005  training loss: 0.083312  test accuracy: 99.63%
+ 45.  lr: 0.0004  training loss: 0.081585  test accuracy: 99.59%
+ 46.  lr: 0.0002  training loss: 0.080855  test accuracy: 99.65%
+ 47.  lr: 0.0002  training loss: 0.079610  test accuracy: 99.69%
+ 48.  lr: 0.0001  training loss: 0.078962  test accuracy: 99.68%
+ 49.  lr: 0.0000  training loss: 0.078583  test accuracy: 99.70%
+ 50.  lr: 0.0000  training loss: 0.078573  test accuracy: 99.71%
+840183 4195744
+
+mismatches:
+2| 0 7
+3| 1 5 8
+4| 6 9 9
+5| 3 3 3 6
+6| 0 1 1 5 8
+7| 1 1 2 2
+8| 3 3 5 9
+9| 4 4 4 7
+
+grid of mismatches: examples/mnist/out/simple.png

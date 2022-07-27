@@ -1,0 +1,150 @@
+torch::nn::Sequential(
+  (0): Transform((
+    (train): torch::nn::Sequential(
+      (crop): knn::RandomCrop(size=[32, 32], pad=[4, 4, 4, 4])
+      (flip): knn::RandomFlip(p=0.5, dim=-1)
+      (zscore): knn::Zscore(mean=125.307,122.95,113.865, stddev=62.9932,62.0887,66.7049, inplace=false)
+    )
+    (eval): torch::nn::Sequential(
+      (zscore): knn::Zscore(mean=125.307,122.95,113.865, stddev=62.9932,62.0887,66.7049, inplace=false)
+    )
+  )
+  (1): torch::nn::Conv2d(3, 16, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+  (2): knn::SeqNest(
+    (0): knn::SeqNest(
+      (0): torch::nn::BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+      (1): torch::nn::ReLU(inplace=true)
+      (2): Residual(
+        (q1): torch::nn::Sequential(
+          (conv1): torch::nn::Conv2d(16, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+        (downsample): torch::nn::Sequential(
+          (0): torch::nn::Conv2d(16, 128, kernel_size=[1, 1], stride=[1, 1], bias=false)
+        )
+      )
+    )
+    (1): knn::SeqNest(
+      (0): Residual(
+        (q1): torch::nn::Sequential(
+          (0): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (1): torch::nn::ReLU(inplace=true)
+          (conv1): torch::nn::Conv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+      )
+    )
+    (2): knn::SeqNest(
+      (0): Residual(
+        (q1): torch::nn::Sequential(
+          (0): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (1): torch::nn::ReLU(inplace=true)
+          (conv1): torch::nn::Conv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+      )
+    )
+  )
+  (3): knn::SeqNest(
+    (0): knn::SeqNest(
+      (0): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+      (1): torch::nn::ReLU(inplace=true)
+      (2): Residual(
+        (q1): torch::nn::Sequential(
+          (conv1): torch::nn::Conv2d(128, 256, kernel_size=[3, 3], stride=[2, 2], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(256, 256, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+        (downsample): torch::nn::Sequential(
+          (0): torch::nn::Conv2d(128, 256, kernel_size=[1, 1], stride=[2, 2], bias=false)
+        )
+      )
+    )
+    (1): knn::SeqNest(
+      (0): Residual(
+        (q1): torch::nn::Sequential(
+          (0): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (1): torch::nn::ReLU(inplace=true)
+          (conv1): torch::nn::Conv2d(256, 256, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(256, 256, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+      )
+    )
+    (2): knn::SeqNest(
+      (0): Residual(
+        (q1): torch::nn::Sequential(
+          (0): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (1): torch::nn::ReLU(inplace=true)
+          (conv1): torch::nn::Conv2d(256, 256, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(256, 256, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+      )
+    )
+  )
+  (4): knn::SeqNest(
+    (0): knn::SeqNest(
+      (0): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+      (1): torch::nn::ReLU(inplace=true)
+      (2): Residual(
+        (q1): torch::nn::Sequential(
+          (conv1): torch::nn::Conv2d(256, 512, kernel_size=[3, 3], stride=[2, 2], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(512, 512, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+        (downsample): torch::nn::Sequential(
+          (0): torch::nn::Conv2d(256, 512, kernel_size=[1, 1], stride=[2, 2], bias=false)
+        )
+      )
+    )
+    (1): knn::SeqNest(
+      (0): Residual(
+        (q1): torch::nn::Sequential(
+          (0): torch::nn::BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (1): torch::nn::ReLU(inplace=true)
+          (conv1): torch::nn::Conv2d(512, 512, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(512, 512, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+      )
+    )
+    (2): knn::SeqNest(
+      (0): Residual(
+        (q1): torch::nn::Sequential(
+          (0): torch::nn::BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (1): torch::nn::ReLU(inplace=true)
+          (conv1): torch::nn::Conv2d(512, 512, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+          (bn2): torch::nn::BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+          (relu2): torch::nn::ReLU(inplace=true)
+          (dropout): torch::nn::Dropout(p=0.3, inplace=false)
+          (conv2): torch::nn::Conv2d(512, 512, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], bias=false)
+        )
+      )
+    )
+  )
+  (batchnorm): torch::nn::BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+  (relu): torch::nn::ReLU(inplace=true)
+  (avgpool): torch::nn::AvgPool2d(kernel_size=[8, 8], stride=[8, 8], padding=[0, 0])
+  (flatten): torch::nn::Flatten(start_dim=1, end_dim=-1)
+  (classify): torch::nn::Linear(in_features=512, out_features=10, bias=true)
+)

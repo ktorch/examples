@@ -1,0 +1,5 @@
+sphinx==3.5.4
+-e git+https://github.com/ktorch/ktorch_sphinx_theme.git#egg=ktorch_sphinx_theme
+sphinxcontrib.katex
+sphinx_panels
+matplotlib

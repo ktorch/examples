@@ -1,0 +1,68 @@
+> q examples/mnist/lbfgs.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+  1.  lr: 1.0000  training loss: 0.200341  test accuracy: 99.25%
+  2.  lr: 1.0000  training loss: 0.121881  test accuracy: 99.26%
+  3.  lr: 1.0000  training loss: 0.116592  test accuracy: 99.38%
+  4.  lr: 1.0000  training loss: 0.113413  test accuracy: 99.39%
+  5.  lr: 1.0000  training loss: 0.108757  test accuracy: 99.46%
+  6.  lr: 1.0000  training loss: 0.106726  test accuracy: 99.45%
+  7.  lr: 1.0000  training loss: 0.105271  test accuracy: 99.52%
+  8.  lr: 1.0000  training loss: 0.103658  test accuracy: 99.42%
+  9.  lr: 1.0000  training loss: 0.104342  test accuracy: 99.44%
+ 10.  lr: 1.0000  training loss: 0.100618  test accuracy: 99.41%
+ 11.  lr: 1.0000  training loss: 0.100775  test accuracy: 99.50%
+ 12.  lr: 1.0000  training loss: 0.100864  test accuracy: 99.49%
+ 13.  lr: 1.0000  training loss: 0.097556  test accuracy: 99.48%
+ 14.  lr: 1.0000  training loss: 0.096946  test accuracy: 99.47%
+ 15.  lr: 1.0000  training loss: 0.097229  test accuracy: 99.54%
+ 16.  lr: 1.0000  training loss: 0.095298  test accuracy: 99.38%
+ 17.  lr: 1.0000  training loss: 0.095078  test accuracy: 99.49%
+ 18.  lr: 1.0000  training loss: 0.094648  test accuracy: 99.50%
+ 19.  lr: 1.0000  training loss: 0.094742  test accuracy: 99.56%
+ 20.  lr: 1.0000  training loss: 0.093828  test accuracy: 99.53%
+ 21.  lr: 1.0000  training loss: 0.093107  test accuracy: 99.50%
+ 22.  lr: 1.0000  training loss: 0.093013  test accuracy: 99.49%
+ 23.  lr: 1.0000  training loss: 0.092994  test accuracy: 99.51%
+ 24.  lr: 1.0000  training loss:*********  test accuracy: 99.50%
+ 25.  lr: 1.0000  training loss: 0.092351  test accuracy: 99.47%
+ 26.  lr: 1.0000  training loss: 0.091320  test accuracy: 99.54%
+ 27.  lr: 1.0000  training loss:*********  test accuracy: 99.44%
+ 28.  lr: 1.0000  training loss: 0.091289  test accuracy: 99.54%
+ 29.  lr: 1.0000  training loss: 0.101038  test accuracy: 99.56%
+ 30.  lr: 1.0000  training loss: 0.090494  test accuracy: 99.58%
+ 31.  lr: 1.0000  training loss: 0.089940  test accuracy: 99.54%
+ 32.  lr: 1.0000  training loss: 0.089522  test accuracy: 99.57%
+ 33.  lr: 1.0000  training loss:*********  test accuracy: 99.53%
+ 34.  lr: 1.0000  training loss: 0.090218  test accuracy: 99.52%
+ 35.  lr: 1.0000  training loss: 0.089303  test accuracy: 99.50%
+ 36.  lr: 1.0000  training loss: 0.088428  test accuracy: 99.52%
+ 37.  lr: 1.0000  training loss: 0.088656  test accuracy: 99.54%
+ 38.  lr: 1.0000  training loss: 0.088566  test accuracy: 99.55%
+ 39.  lr: 1.0000  training loss: 0.088962  test accuracy: 99.45%
+ 40.  lr: 1.0000  training loss: 0.091061  test accuracy: 99.52%
+ 41.  lr: 1.0000  training loss: 0.089203  test accuracy: 99.44%
+ 42.  lr: 1.0000  training loss: 0.087519  test accuracy: 99.61%
+ 43.  lr: 1.0000  training loss: 0.087513  test accuracy: 99.57%
+ 44.  lr: 1.0000  training loss: 0.087530  test accuracy: 99.55%
+ 45.  lr: 1.0000  training loss: 0.087406  test accuracy: 99.53%
+ 46.  lr: 1.0000  training loss: 0.087066  test accuracy: 99.51%
+ 47.  lr: 1.0000  training loss: 0.087031  test accuracy: 99.59%
+ 48.  lr: 1.0000  training loss: 0.086508  test accuracy: 99.58%
+ 49.  lr: 1.0000  training loss: 0.087198  test accuracy: 99.59%
+ 50.  lr: 1.0000  training loss: 0.086894  test accuracy: 99.49%
+968953 4195504
+
+mismatches:
+0| ,7
+2| 0 7
+3| ,5
+4| 9 9 9 9
+5| 0 3 3 3 3 3 3 3 3 3 3 6
+6| 0 0 1 1 5 8 8
+7| 1 1 1 2 2 2 2 4 8 9 9
+8| 2 9
+9| 3 4 4 4 4 4 5 5 5 7 7
+
+grid of mismatches: examples/mnist/out/lbfgs.png

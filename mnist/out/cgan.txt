@@ -1,0 +1,51 @@
+Generator:
+----------
+
+torch::nn::Sequential(
+  (0): SeqJoin(
+    (qx): torch::nn::Sequential
+    (qy): torch::nn::Sequential(
+      (0): torch::nn::Embedding(num_embeddings=10, embedding_dim=10)
+      (1): knn::Reshape(size=-1 10 1 1)
+    )
+    (join): knn::Cat(dim=1)
+  )
+  (1): torch::nn::ConvTranspose2d(110, 256, kernel_size=[4, 4], stride=[1, 1], bias=false)
+  (2): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+  (3): torch::nn::ReLU()
+  (4): torch::nn::ConvTranspose2d(256, 128, kernel_size=[3, 3], stride=[2, 2], padding=[1, 1], bias=false)
+  (5): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+  (6): torch::nn::ReLU()
+  (7): torch::nn::ConvTranspose2d(128, 64, kernel_size=[4, 4], stride=[2, 2], padding=[1, 1], bias=false)
+  (8): torch::nn::BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+  (9): torch::nn::ReLU()
+  (10): torch::nn::ConvTranspose2d(64, 1, kernel_size=[4, 4], stride=[2, 2], padding=[1, 1], bias=false)
+  (11): torch::nn::Tanh()
+)
+
+
+Discriminator:
+--------------
+
+torch::nn::Sequential(
+  (0): SeqJoin(
+    (qx): torch::nn::Sequential
+    (qy): torch::nn::Sequential(
+      (0): torch::nn::Embedding(num_embeddings=10, embedding_dim=50)
+      (1): torch::nn::Linear(in_features=50, out_features=784, bias=true)
+      (2): knn::Reshape(size=-1 1 28 28)
+    )
+    (join): knn::Cat(dim=1)
+  )
+  (1): torch::nn::Conv2d(2, 64, kernel_size=[4, 4], stride=[2, 2], padding=[1, 1], bias=false)
+  (2): torch::nn::LeakyReLU(negative_slope=0.2)
+  (3): torch::nn::Conv2d(64, 128, kernel_size=[4, 4], stride=[2, 2], padding=[1, 1], bias=false)
+  (4): torch::nn::BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+  (5): torch::nn::LeakyReLU(negative_slope=0.2)
+  (6): torch::nn::Conv2d(128, 256, kernel_size=[4, 4], stride=[2, 2], padding=[1, 1], bias=false)
+  (7): torch::nn::BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=true, track_running_stats=true)
+  (8): torch::nn::LeakyReLU(negative_slope=0.2)
+  (9): torch::nn::Conv2d(256, 1, kernel_size=[3, 3], stride=[1, 1], bias=false)
+  (10): torch::nn::Sigmoid()
+  (11): torch::nn::Flatten(start_dim=0, end_dim=-1)
+)

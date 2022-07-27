@@ -1,0 +1,35 @@
+> q examples/gpt/char.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+epoch:  1  iter: 5577 of 5577  lr: 0.00030  loss: 0.228  time: 01:01:40   1.5 iter/sec
+epoch:  2  iter: 5577 of 5577  lr: 0.00006  loss: 0.135  time: 01:01:42   1.5 iter/sec
+
+O God, O God! that e'er this tongue of mine,
+That laid the sentence of dread banishment
+On yon proud man, should take it off again
+With words of sooth! O that I were as great
+As is my grief, or lesser than my name!
+Or that I could forget what I have been,
+Or not remember what I must be now!
+Swell'st thou, proud heart? I'll give thee scope to beat,
+Since foes have scope to beat both thee and me.
+
+DUKE OF AUMERLE:
+Northumberland comes back from Bolingbroke.
+
+KING RICHARD II:
+What must the king do now? must he 
+
+
+q)-2 g[140]"Oh Romeo";
+Oh Romeo! he is already dead; stabbed with a
+white wench's black eye; shot through the ear with a
+love-song; the very pin of his heart cleft with th
+
+q)-2 g[140]"Oh Romeo wherefore";
+Oh Romeo wherefore are thou hast not come to them,
+And soon I'll rid you from the fear of them.
+
+KING RICHARD III:
+Thou sing'st sweet music. Hark, come hither

@@ -1,0 +1,168 @@
+=======================================================================================================
+NVIDIA GeForce GTX 1080 Ti GPU 
+=======================================================================================================
+
+> q math.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB 
+
+sample data sequences:
+6 7 9 8 1 6 5
+5 7 7 8 1 3 5
+2 0 7 7 0 9 7
+0 8 3 7 0 4 5
+7 5 9 6 1 7 1
+
+epoch:   1  iter:   18 of 18  lr: 0.00060  loss: 1.737  time: 00:00:00.105  169.8 iter/sec     1.7%
+epoch:   2  iter:   18 of 18  lr: 0.00060  loss: 1.535  time: 00:00:00.104  172.6 iter/sec     1.7%
+epoch:   3  iter:   18 of 18  lr: 0.00060  loss: 1.356  time: 00:00:00.104  172.6 iter/sec     4.5%
+epoch:   4  iter:   18 of 18  lr: 0.00060  loss: 1.250  time: 00:00:00.105  171.3 iter/sec     6.4%
+epoch:   5  iter:   18 of 18  lr: 0.00060  loss: 1.166  time: 00:00:00.104  172.0 iter/sec     4.8%
+epoch:   6  iter:   18 of 18  lr: 0.00060  loss: 1.128  time: 00:00:00.104  172.3 iter/sec     7.8%
+epoch:   7  iter:   18 of 18  lr: 0.00060  loss: 1.090  time: 00:00:00.104  172.2 iter/sec     6.7%
+epoch:   8  iter:   18 of 18  lr: 0.00060  loss: 1.072  time: 00:00:00.104  172.2 iter/sec     5.4%
+epoch:   9  iter:   18 of 18  lr: 0.00060  loss: 1.036  time: 00:00:00.104  172.3 iter/sec     5.6%
+epoch:  10  iter:   18 of 18  lr: 0.00060  loss: 1.036  time: 00:00:00.104  172.2 iter/sec     7.9%
+epoch:  11  iter:   18 of 18  lr: 0.00060  loss: 0.968  time: 00:00:00.104  172.1 iter/sec    11.7%
+epoch:  12  iter:   18 of 18  lr: 0.00060  loss: 0.738  time: 00:00:00.104  172.3 iter/sec    39.3%
+epoch:  13  iter:   18 of 18  lr: 0.00060  loss: 0.517  time: 00:00:00.104  172.1 iter/sec    71.6%
+epoch:  14  iter:   18 of 18  lr: 0.00060  loss: 0.428  time: 00:00:00.104  172.2 iter/sec    74.2%
+epoch:  15  iter:   18 of 18  lr: 0.00060  loss: 0.414  time: 00:00:00.104  172.3 iter/sec    76.9%
+epoch:  16  iter:   18 of 18  lr: 0.00060  loss: 0.323  time: 00:00:00.104  172.2 iter/sec    80.5%
+epoch:  17  iter:   18 of 18  lr: 0.00060  loss: 0.319  time: 00:00:00.104  172.0 iter/sec    83.1%
+epoch:  18  iter:   18 of 18  lr: 0.00060  loss: 0.293  time: 00:00:00.104  172.3 iter/sec    85.6%
+epoch:  19  iter:   18 of 18  lr: 0.00060  loss: 0.277  time: 00:00:00.104  172.3 iter/sec    87.8%
+epoch:  20  iter:   18 of 18  lr: 0.00060  loss: 0.247  time: 00:00:00.104  172.2 iter/sec    91.4%
+epoch:  21  iter:   18 of 18  lr: 0.00060  loss: 0.230  time: 00:00:00.104  172.3 iter/sec    95.0%
+epoch:  22  iter:   18 of 18  lr: 0.00060  loss: 0.215  time: 00:00:00.104  172.3 iter/sec    95.6%
+epoch:  23  iter:   18 of 18  lr: 0.00060  loss: 0.195  time: 00:00:00.104  172.1 iter/sec    97.2%
+epoch:  24  iter:   18 of 18  lr: 0.00060  loss: 0.180  time: 00:00:00.104  172.3 iter/sec    98.6%
+epoch:  25  iter:   18 of 18  lr: 0.00060  loss: 0.139  time: 00:00:00.104  172.3 iter/sec    99.7%
+epoch:  26  iter:   18 of 18  lr: 0.00060  loss: 0.114  time: 00:00:00.104  172.3 iter/sec    99.4%
+epoch:  27  iter:   18 of 18  lr: 0.00060  loss: 0.126  time: 00:00:00.104  172.3 iter/sec    99.5%
+epoch:  28  iter:   18 of 18  lr: 0.00060  loss: 0.125  time: 00:00:00.104  172.3 iter/sec    99.4%
+epoch:  29  iter:   18 of 18  lr: 0.00060  loss: 0.098  time: 00:00:00.104  172.3 iter/sec    99.7%
+epoch:  30  iter:   18 of 18  lr: 0.00060  loss: 0.124  time: 00:00:00.104  172.1 iter/sec    99.5%
+epoch:  31  iter:   18 of 18  lr: 0.00060  loss: 0.108  time: 00:00:00.104  172.1 iter/sec    99.3%
+epoch:  32  iter:   18 of 18  lr: 0.00060  loss: 0.094  time: 00:00:00.104  172.3 iter/sec    99.6%
+epoch:  33  iter:   18 of 18  lr: 0.00060  loss: 0.079  time: 00:00:00.104  172.3 iter/sec    99.8%
+epoch:  34  iter:   18 of 18  lr: 0.00060  loss: 0.079  time: 00:00:00.104  172.3 iter/sec   100.0%
+epoch:  35  iter:   18 of 18  lr: 0.00060  loss: 0.073  time: 00:00:00.104  172.0 iter/sec    99.7%
+epoch:  36  iter:   18 of 18  lr: 0.00060  loss: 0.063  time: 00:00:00.104  172.3 iter/sec   100.0%
+epoch:  37  iter:   18 of 18  lr: 0.00060  loss: 0.085  time: 00:00:00.104  172.2 iter/sec   100.0%
+epoch:  38  iter:   18 of 18  lr: 0.00060  loss: 0.065  time: 00:00:00.104  172.2 iter/sec   100.0%
+epoch:  39  iter:   18 of 18  lr: 0.00060  loss: 0.086  time: 00:00:00.104  172.2 iter/sec    99.1%
+epoch:  40  iter:   18 of 18  lr: 0.00060  loss: 0.056  time: 00:00:00.104  172.2 iter/sec    99.9%
+epoch:  41  iter:   18 of 18  lr: 0.00060  loss: 0.064  time: 00:00:00.104  172.1 iter/sec   100.0%
+epoch:  42  iter:   18 of 18  lr: 0.00060  loss: 0.057  time: 00:00:00.104  172.2 iter/sec   100.0%
+epoch:  43  iter:   18 of 18  lr: 0.00060  loss: 0.050  time: 00:00:00.104  172.2 iter/sec   100.0%
+epoch:  44  iter:   18 of 18  lr: 0.00060  loss: 0.081  time: 00:00:00.104  172.2 iter/sec   100.0%
+epoch:  45  iter:   18 of 18  lr: 0.00060  loss: 0.058  time: 00:00:00.104  172.3 iter/sec   100.0%
+epoch:  46  iter:   18 of 18  lr: 0.00060  loss: 0.056  time: 00:00:00.104  172.3 iter/sec   100.0%
+epoch:  47  iter:   18 of 18  lr: 0.00060  loss: 0.056  time: 00:00:00.104  172.2 iter/sec    99.2%
+epoch:  48  iter:   18 of 18  lr: 0.00060  loss: 0.056  time: 00:00:00.104  172.2 iter/sec   100.0%
+epoch:  49  iter:   18 of 18  lr: 0.00060  loss: 0.062  time: 00:00:00.104  172.2 iter/sec    99.9%
+epoch:  50  iter:   18 of 18  lr: 0.00060  loss: 0.031  time: 00:00:00.104  172.2 iter/sec    99.9%
+
+mismatches in train: 1, test: 1
+dataset a  b  predict actual ok
+-------------------------------
+train   79 18 197     97     0 
+test    4  89 193     93     0 
+
+=======================================================================================================
+CPU
+=======================================================================================================
+
+> q math.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB
+
+sample data sequences:
+6 7 9 8 1 6 5
+5 7 7 8 1 3 5
+2 0 7 7 0 9 7
+0 8 3 7 0 4 5
+7 5 9 6 1 7 1
+
+epoch:   1  iter:   18 of 18  lr: 0.00060  loss: 1.723  time: 00:00:00.683   26.3 iter/sec     1.4%
+epoch:   2  iter:   18 of 18  lr: 0.00060  loss: 1.537  time: 00:00:00.537   33.5 iter/sec     1.6%
+epoch:   3  iter:   18 of 18  lr: 0.00060  loss: 1.375  time: 00:00:00.536   33.5 iter/sec     1.6%
+epoch:   4  iter:   18 of 18  lr: 0.00060  loss: 1.249  time: 00:00:00.536   33.5 iter/sec     3.7%
+epoch:   5  iter:   18 of 18  lr: 0.00060  loss: 1.179  time: 00:00:00.529   34.0 iter/sec     4.3%
+epoch:   6  iter:   18 of 18  lr: 0.00060  loss: 1.140  time: 00:00:00.533   33.7 iter/sec     6.6%
+epoch:   7  iter:   18 of 18  lr: 0.00060  loss: 1.101  time: 00:00:00.537   33.5 iter/sec     6.0%
+epoch:   8  iter:   18 of 18  lr: 0.00060  loss: 1.077  time: 00:00:00.533   33.7 iter/sec     8.4%
+epoch:   9  iter:   18 of 18  lr: 0.00060  loss: 1.046  time: 00:00:00.533   33.7 iter/sec     6.6%
+epoch:  10  iter:   18 of 18  lr: 0.00060  loss: 1.049  time: 00:00:00.535   33.6 iter/sec     7.3%
+epoch:  11  iter:   18 of 18  lr: 0.00060  loss: 1.010  time: 00:00:00.534   33.7 iter/sec     7.0%
+epoch:  12  iter:   18 of 18  lr: 0.00060  loss: 1.015  time: 00:00:00.535   33.6 iter/sec     8.9%
+epoch:  13  iter:   18 of 18  lr: 0.00060  loss: 0.976  time: 00:00:00.535   33.6 iter/sec     7.3%
+epoch:  14  iter:   18 of 18  lr: 0.00060  loss: 0.993  time: 00:00:00.532   33.8 iter/sec     6.1%
+epoch:  15  iter:   18 of 18  lr: 0.00060  loss: 0.973  time: 00:00:00.533   33.7 iter/sec     9.6%
+epoch:  16  iter:   18 of 18  lr: 0.00060  loss: 0.937  time: 00:00:00.534   33.7 iter/sec    18.8%
+epoch:  17  iter:   18 of 18  lr: 0.00060  loss: 0.676  time: 00:00:00.535   33.6 iter/sec    58.4%
+epoch:  18  iter:   18 of 18  lr: 0.00060  loss: 0.473  time: 00:00:00.534   33.7 iter/sec    83.5%
+epoch:  19  iter:   18 of 18  lr: 0.00060  loss: 0.414  time: 00:00:00.533   33.7 iter/sec    88.7%
+epoch:  20  iter:   18 of 18  lr: 0.00060  loss: 0.371  time: 00:00:00.534   33.7 iter/sec    88.5%
+epoch:  21  iter:   18 of 18  lr: 0.00060  loss: 0.297  time: 00:00:00.535   33.6 iter/sec    95.3%
+epoch:  22  iter:   18 of 18  lr: 0.00060  loss: 0.285  time: 00:00:00.534   33.7 iter/sec    94.7%
+epoch:  23  iter:   18 of 18  lr: 0.00060  loss: 0.254  time: 00:00:00.532   33.8 iter/sec    95.9%
+epoch:  24  iter:   18 of 18  lr: 0.00060  loss: 0.235  time: 00:00:00.536   33.5 iter/sec    98.0%
+epoch:  25  iter:   18 of 18  lr: 0.00060  loss: 0.210  time: 00:00:00.534   33.7 iter/sec    97.9%
+epoch:  26  iter:   18 of 18  lr: 0.00060  loss: 0.169  time: 00:00:00.536   33.5 iter/sec    98.8%
+epoch:  27  iter:   18 of 18  lr: 0.00060  loss: 0.148  time: 00:00:00.537   33.5 iter/sec    99.3%
+epoch:  28  iter:   18 of 18  lr: 0.00060  loss: 0.169  time: 00:00:00.538   33.4 iter/sec    99.5%
+epoch:  29  iter:   18 of 18  lr: 0.00060  loss: 0.192  time: 00:00:00.538   33.4 iter/sec    99.3%
+epoch:  30  iter:   18 of 18  lr: 0.00060  loss: 0.144  time: 00:00:00.533   33.7 iter/sec    99.6%
+epoch:  31  iter:   18 of 18  lr: 0.00060  loss: 0.135  time: 00:00:00.539   33.3 iter/sec    99.4%
+epoch:  32  iter:   18 of 18  lr: 0.00060  loss: 0.145  time: 00:00:00.536   33.5 iter/sec    99.4%
+epoch:  33  iter:   18 of 18  lr: 0.00060  loss: 0.119  time: 00:00:00.540   33.3 iter/sec    99.7%
+epoch:  34  iter:   18 of 18  lr: 0.00060  loss: 0.106  time: 00:00:00.537   33.5 iter/sec    99.7%
+epoch:  35  iter:   18 of 18  lr: 0.00060  loss: 0.102  time: 00:00:00.537   33.5 iter/sec   100.0%
+epoch:  36  iter:   18 of 18  lr: 0.00060  loss: 0.093  time: 00:00:00.531   33.8 iter/sec    99.9%
+epoch:  37  iter:   18 of 18  lr: 0.00060  loss: 0.106  time: 00:00:00.535   33.6 iter/sec    99.9%
+epoch:  38  iter:   18 of 18  lr: 0.00060  loss: 0.080  time: 00:00:00.537   33.5 iter/sec    99.9%
+epoch:  39  iter:   18 of 18  lr: 0.00060  loss: 0.097  time: 00:00:00.538   33.4 iter/sec    99.9%
+epoch:  40  iter:   18 of 18  lr: 0.00060  loss: 0.077  time: 00:00:00.534   33.6 iter/sec    99.8%
+epoch:  41  iter:   18 of 18  lr: 0.00060  loss: 0.065  time: 00:00:00.531   33.9 iter/sec   100.0%
+epoch:  42  iter:   18 of 18  lr: 0.00060  loss: 0.062  time: 00:00:00.530   34.0 iter/sec    99.9%
+epoch:  43  iter:   18 of 18  lr: 0.00060  loss: 0.082  time: 00:00:00.534   33.7 iter/sec   100.0%
+epoch:  44  iter:   18 of 18  lr: 0.00060  loss: 0.069  time: 00:00:00.535   33.6 iter/sec    99.9%
+epoch:  45  iter:   18 of 18  lr: 0.00060  loss: 0.052  time: 00:00:00.536   33.6 iter/sec   100.0%
+epoch:  46  iter:   18 of 18  lr: 0.00060  loss: 0.099  time: 00:00:00.532   33.8 iter/sec    99.8%
+epoch:  47  iter:   18 of 18  lr: 0.00060  loss: 0.068  time: 00:00:00.534   33.7 iter/sec   100.0%
+epoch:  48  iter:   18 of 18  lr: 0.00060  loss: 0.048  time: 00:00:00.542   33.2 iter/sec   100.0%
+epoch:  49  iter:   18 of 18  lr: 0.00060  loss: 0.059  time: 00:00:00.537   33.5 iter/sec    99.9%
+epoch:  50  iter:   18 of 18  lr: 0.00060  loss: 0.064  time: 00:00:00.541   33.3 iter/sec   100.0%
+
+mismatches in train: 0, test: 0
+
+
+=======================================================================================================
+NVIDIA GeForce GTX 1080 Tii GPU, using 3-digit sequences of 8, 10 epochs, runtime of about 2.5 minutes:
+=======================================================================================================
+
+> q math.q
+KDB+ 4.0 2021.07.12 Copyright (C) 1993-2021 Kx Systems
+l64/ 12(16)core 64033MB 
+
+sample data sequences:
+5 2 4 4 4 9 0 9 7 3
+0 5 3 5 7 1 0 6 2 4
+2 6 9 8 6 5 1 1 3 4
+2 6 8 4 4 5 0 7 1 3
+8 4 0 5 2 9 1 3 6 9
+
+epoch:   1  iter: 1800 of 1800  lr: 0.00060  loss: 0.047  time: 00:00:14.067  128.0 iter/sec    99.3%
+epoch:   2  iter: 1800 of 1800  lr: 0.00060  loss: 0.018  time: 00:00:14.104  127.6 iter/sec    99.7%
+epoch:   3  iter: 1800 of 1800  lr: 0.00060  loss: 0.012  time: 00:00:14.139  127.3 iter/sec   100.0%
+epoch:   4  iter: 1800 of 1800  lr: 0.00060  loss: 0.003  time: 00:00:14.147  127.2 iter/sec   100.0%
+epoch:   5  iter: 1800 of 1800  lr: 0.00060  loss: 0.005  time: 00:00:14.184  126.9 iter/sec   100.0%
+epoch:   6  iter: 1800 of 1800  lr: 0.00060  loss: 0.001  time: 00:00:14.188  126.9 iter/sec   100.0%
+epoch:   7  iter: 1800 of 1800  lr: 0.00060  loss: 0.004  time: 00:00:14.193  126.8 iter/sec   100.0%
+epoch:   8  iter: 1800 of 1800  lr: 0.00060  loss: 0.003  time: 00:00:14.191  126.8 iter/sec   100.0%
+epoch:   9  iter: 1800 of 1800  lr: 0.00060  loss: 0.004  time: 00:00:14.286  126.0 iter/sec   100.0%
+epoch:  10  iter: 1800 of 1800  lr: 0.00060  loss: 0.002  time: 00:00:14.286  126.0 iter/sec   100.0%
+
+mismatches in train: 0, test: 0
