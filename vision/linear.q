@@ -2,24 +2,23 @@
 p:first` vs hsym .z.f                /path of this script
 system"l ",1_string` sv p,`cifar.q   /load CIFAR10 data w'script (assume in same dir)
 
-seed 42
-
+/ simple linear model on flattened images: accuracy of around 50%
 q:seq(`sequential;
       `flatten;
-      (`linear; 32*32*3; 64);
+      (`linear; 32*32*3; 128);
+      (`batchnorm1d; 128);
+      `relu;
+      (`linear; 128; 64);
       (`batchnorm1d; 64);
       `relu;
-      (`linear; 64; 32);
-      (`batchnorm1d; 32);
-      `relu;
-      (`linear;32;10))
+      (`linear;64;10))
 
 q:module q
-m:model(q; loss`ce; opt(`adam;q;.0004))
+to(q;device[])
+m:model(q; loss`ce; opt(`sgd;q;.002;.9))
+d:@[;`y`Y;"j"$]@[cifar10[];`x`X;{"e"$-1+x%127.5}]
 
-d:cifar10[]
+train(m; `batchsize`shuffle; 10,1b); train(m; d`x;d`y);
+test(m;`batchsize`metrics!(1000;`accuracy)); test(m; d`X;d`Y);
 
-train(m; `batchsize`shuffle; 10,1b)
-train(m; "e"$d`x; "j"$d`y)
-
-\ts:5 show run m
+\ts:20 {a:run x; a:a,testrun x; -2 raze("training loss: ";"  test accuracy: "),'string a;}m

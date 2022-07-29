@@ -17,7 +17,6 @@ block:{[u;n;b;f;t] /u:hidden units, n:layers, b:backcasts, f:forecasts, t:thetas
 
 if[in[c:device[];cudadevices()]; setting`benchmark,1b]  /set benchmark mode if CUDA available
 m:module`nbeats,raze block[256;4;b;f]''[3#'4 8]         /2 stacks of 3 blocks each, 4 layers per block
-\
 to(m;c)                                                 /move module to CUDA device if available
 m:model(m;loss`mse;opt(`adamw;m;`decay,.1))             /create full model: module, loss, optimizer
 

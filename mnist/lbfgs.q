@@ -23,7 +23,7 @@ test(m;  `batchsize`metrics; 1000,`accuracy); test(m; d`X; d`Y);
 fmt:.Q.fmt'[4 7 9 6;0 4 6 2]
 msg:{-2 raze[("";"  lr:";"  training loss:";"  test accuracy:"),'fmt x],"%";}
 fit:{[m;i] msg i,lr[m],raze`run`testrun@\:m; i+1}
-\ts 50 fit[m]/1; 
+\ts 10 fit[m]/1; 
 
 /build table of mismatches in test dataset, convert to .png with labels
 test(m;`metrics;`predict)

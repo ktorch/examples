@@ -2,6 +2,7 @@
 p:first` vs hsym .z.f                /path of this script
 system"l ",1_string` sv p,`cifar.q   /load CIFAR10 data w'script (assume in same dir)
 
+/simple linear model on flattened images: around 58% accuracy on test data
 n:2048 512 128 64
 q:seq(`sequential;
       `flatten;
